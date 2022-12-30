@@ -1,0 +1,134 @@
+.bgbox {
+    z-index: -3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    backface-visibility: hidden;
+
+    transition: all linear .5s, opacity linear 3s, filter linear .3s;
+}
+
+.bgbox-show {
+    opacity: 1;
+}
+
+.bgbox-word {
+    color: #ffffff;
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+
+    position: absolute;
+    bottom: 30px;
+}
+
+/** searchbar code refer to https://limestart.cn/ */
+.home-searchbar {
+    display: flex;
+    position: absolute;
+    top: 40vh;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 45px;
+    border-radius: 20px;
+    color: var(--bs-body-bg);
+    background-color: rgba(255, 255, 255, .25);
+    box-shadow: rgb(0 0 0 / 20%) 0 0 10px;
+    -webkit-backdrop-filter: blur(10px) saturate(1.5);
+    backdrop-filter: blur(10px) saturate(1.5);
+    overflow: hidden;
+    transition: color .25s,
+    background-color .25s,
+    box-shadow .25s,
+    left .25s,opacity .25s,top .25s,width .25s;
+}
+
+.home-searchbar #search-bar {
+    border: none;
+    background: transparent;
+    outline: 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+.home-searchbar input::-webkit-input-placeholder {
+    color: var(--bs-body-color);
+}
+
+.home-sidebar {
+    width: 1px;
+    padding: 10px 0;
+    height: 100%;
+    background: var(--bs-body-bg);
+
+    top: 0;
+    right: 0;
+    position: fixed;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+
+    color: var(--bs-secondary);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    z-index: 10000;
+    transition-delay: 200ms;
+    transition: width ease-in .2s;
+}
+
+.sidebar-link {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    width: 100px;
+    text-align: center;
+    font-size: smaller;
+    color: var(--bs-secondary);
+    text-decoration: none;
+    transition: background linear .2s;
+}
+
+.sidebar-link img {
+    display: block;
+    overflow: hidden;
+}
+
+.sidebar-link:hover {
+    background: #f5f7f7;
+    color: var(--bs-primary);
+}
+
+@media screen and (max-width: 1024px) {
+    .home-sidebar {
+        display: none;
+    }
+}
+
+.home-timer {
+    position: absolute;
+    color: #000000;
+    text-shadow: 0 0 30px rgb(0 0 0 / 40%);
+    top: 200px;
+    font-size: 3rem;
+    font-weight: bolder;
+    font-family: "Consolas Font", sans-serif;
+    background: transparent;
+}
+
+.sub-page {
+    height: 100vh;
+}
+
+.sub-page-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    background: transparent;
+    height: 100vh;
+}
