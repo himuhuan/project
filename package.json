@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "hover.css": "^2.3.2",
+    "jquery": "^3.6.3",
+    "require.js": "^1.0.0"
+  }
+}

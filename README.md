@@ -1,5 +1,5 @@
-# project --- 江西财经大学 Himu の Web 大作业
-jxufe Web Homework, 基于 Vue + Typescript
+# project --- 江西财经大学 の Web 大作业
+jxufe Web Homework, 基于 Bootstrap 5.2.3 + sass
 
 ## 介绍
 
@@ -12,6 +12,7 @@ jxufe Web Homework, 基于 Vue + Typescript
 ## 版权说明
 
 Copyright(c) 2022 Himu & BlueDream.
+
 本项目引用的部分资源可能受到版权保护，本网站所有内容均以演示为目的。
 
 ## 开源许可
