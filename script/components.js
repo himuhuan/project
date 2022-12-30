@@ -1,3 +1,7 @@
+// noinspection JSJQueryEfficiency
+
+/* According media screen to change some style */
+const mQuery = window.matchMedia('(max-width: 960px)')
 
 $(document).ready(function () {
     $("#nav-sidebar").mouseover(function () {
@@ -29,12 +33,37 @@ $(document).ready(function () {
     }).mousedown(function () {
         $(".dropdown-menu").slideUp(300);
     })
+
+    $("#search-bar").click(function (event) {
+        if (mQuery.matches)
+            $(".home-searchbar").css("width", "250px");
+        else
+            $(".home-searchbar").css("width", "500px");
+        $(".bgbox").css({
+            "transform" : "scale(1.1)",
+            "filter" : "blur(20px)"
+        });
+        event.stopPropagation();
+    }).on("keypress", function (event) {
+        if (event.keyCode === 13) {
+            let url = "https://cn.bing.com/search?q=";
+            url += $("#search-bar").val();
+            window.open(url,"_blank");
+            $("#search-bar").val("");
+        }
+    })
+
+    $(document).click(function () {
+        $(".home-searchbar").css("width", "250px");
+        $(".bgbox").css({
+            "transform" : "scale(1.0)",
+            "filter" : "blur(0px)"
+        });
+    })
 });
 
 /* Autoplay backgrounds  */
 let backgroundBoxes = document.getElementsByClassName("bgbox");
-let opa = 1;
-let fadeOutTimer, fadeInTimer;
 let bgIndex = 0;
 
 function autoPlay() {
@@ -44,4 +73,5 @@ function autoPlay() {
     backgroundBoxes[bgIndex].classList.add("bgbox-show");
 }
 
-let autoPlayer = setInterval(autoPlay, 15000);
+setInterval(autoPlay, 15000);
+
