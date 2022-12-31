@@ -2,9 +2,42 @@
 
 /* According media screen to change some style */
 const mQuery = window.matchMedia('(max-width: 960px)')
+/* preload background */
+let img = new Image();
+img.src = "../images/backgrounds/Dark/background1.jpg";
+
+/* load theme according to time */
+// 0 -- Light, 1 -- Dark;
+let gWebsiteThemeFlag = 0;
+
+function changeTheme() {
+    changeBgBoxImage();
+    if (gWebsiteThemeFlag === 0) {
+        $("#main-nav").addClass("bg-dark").removeClass("bg-white").removeClass("opacity-85")
+            .removeClass("navbar-light").addClass("navbar-dark");
+        $("#dropdown-list").addClass("dropdown-menu-dark");
+        document.documentElement.style.setProperty("--bs-body-color", "#ffffff");
+        document.documentElement.style.setProperty("--bs-body-bg", "#333333");
+        document.documentElement.style.setProperty("--bs-secondary", "#e5e5e5");
+        gWebsiteThemeFlag = 1;
+    } else {
+        $("#main-nav").addClass("bg-white").removeClass("bg-dark").addClass("opacity-85")
+            .removeClass("navbar-dark").addClass("navbar-light");
+        $("#dropdown-list").removeClass("dropdown-menu-dark");
+        document.documentElement.style.setProperty("--bs-body-color", "#000000");
+        document.documentElement.style.setProperty("--bs-body-bg", "#ffffff");
+        document.documentElement.style.setProperty("--bs-secondary", "#9f9f9f");
+        gWebsiteThemeFlag = 0;
+    }
+}
 
 $(document).ready(function () {
-
+    let now = new Date();
+    if (now.getHours() >= 12) {
+        console.log("set to dark");
+        changeTheme();
+        gWebsiteThemeFlag = 1;
+    }
     /* mobile nav */
     $("#nav-menu-button").click(function (event) {
         $("#nav-sidebar").css({
@@ -42,7 +75,7 @@ $(document).ready(function () {
     });
 
     $("#nav-index").click(function () {
-       $(".dropdown-menu").slideDown(300);
+        $(".dropdown-menu").slideDown(300);
     });
 
     $(".dropdown-menu").mouseleave(function () {
@@ -57,24 +90,28 @@ $(document).ready(function () {
         }
         $(".home-searchbar").css("width", "500px");
         $(".bgbox").css({
-            "transform" : "scale(1.1)",
-            "filter" : "blur(20px)"
+            "transform": "scale(1.1)",
+            "filter": "blur(20px)"
         });
         event.stopPropagation();
     }).on("keypress", function (event) {
         if (event.keyCode === 13) {
             let url = "https://cn.bing.com/search?q=";
             url += $("#search-bar").val();
-            window.open(url,"_blank");
+            window.open(url, "_blank");
             $("#search-bar").val("");
         }
     })
 
+    $("#theme-switch").click(function () {
+        changeTheme();
+    });
+
     $(document).click(function () {
         $(".home-searchbar").css("width", "250px");
         $(".bgbox").css({
-            "transform" : "scale(1.0)",
-            "filter" : "blur(0px)"
+            "transform": "scale(1.0)",
+            "filter": "blur(0px)"
         });
         $("#home-timer").css("display", "block");
         $(".home-sidebar").css("width", "0px");
@@ -108,6 +145,19 @@ function timer() {
 
 function updateTimer() {
     $("#home-timer").text(timer());
+}
+
+function changeBgBoxImage() {
+    for (let i = 0; i < backgroundBoxes.length; i++) {
+        let src = backgroundBoxes[i].getAttribute("src");
+        if (gWebsiteThemeFlag === 0) {
+            backgroundBoxes[i].setAttribute("src",
+                src.replace("Light", "Dark"));
+        } else {
+            backgroundBoxes[i].setAttribute("src",
+                src.replace("Dark", "Light"));
+        }
+    }
 }
 
 setInterval(updateTimer, 10000);

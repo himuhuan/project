@@ -13,8 +13,8 @@
 </head>
 <body>
 
-<header class="border-bottom sticky-top">
-    <nav class="navbar opacity-85 bg-body shadow-sm navbar-expand-sm px-4 py-0">
+<header class="sticky-top">
+    <nav class="navbar opacity-85 navbar-light bg-white shadow-sm navbar-expand-sm px-4 py-0" id="main-nav">
         <a class="navbar-brand font-monospace text-center" href="#">
             Magimu
         </a>
@@ -22,7 +22,7 @@
             <ul class="navbar-nav">
                 <li class="nav-item mx-lg-4 dropdown">
                     <a class="nav-link dropdown-toggle hvr-wobble-vertical" role="button" id="nav-index" href="#"> 索引 </a>
-                    <ul class="dropdown-menu shadow-sm">
+                    <ul class="dropdown-menu shadow-sm" id="dropdown-list">
                         <li><a class="dropdown-item hvr-grow" href="#"> 动画 </a></li>
                         <li><a class="dropdown-item hvr-grow" href="#"> 漫画 </a></li>
                         <li><a class="dropdown-item hvr-grow" href="#"> 本子 </a></li>
@@ -31,7 +31,7 @@
                     </ul>
                 </li>
                 <li class="nav-item mx-lg-4"><a class="nav-link hvr-wobble-horizontal" href="#"> <u>登录/注册</u> </a></li>
-                <li class="nav-item mx-lg-4"><a class="nav-link hvr-wobble-horizontal" href="#"> 切换主题 </a></li>
+                <li class="nav-item mx-lg-4"><a class="nav-link hvr-wobble-horizontal" href="#" id="theme-switch"> 切换主题 </a></li>
                 <li class="nav-item mx-lg-4"><a class="nav-link hvr-wobble-horizontal" href="#"> 关于 </a></li>
             </ul>
         </div>

@@ -106,7 +106,6 @@
 }
 
 .sidebar-link:hover {
-    background: #f5f7f7;
     color: var(--bs-primary);
 }
 
@@ -144,7 +143,7 @@
 
 .min-timer {
     position: absolute;
-    color: #000000;
+    color: var(--bs-body-color);
     text-shadow: 0 0 30px rgb(0 0 0 / 40%);
     top: 200px;
     font-size: 3rem;
