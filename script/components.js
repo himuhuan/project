@@ -6,7 +6,7 @@ const mQuery = window.matchMedia('(max-width: 960px)')
 $(document).ready(function () {
     $("#nav-sidebar").mouseover(function () {
         $("#nav-sidebar").css({
-            "width": "100px",
+            "width": "150px",
             "height": "100vh",
             "top": "0",
             "position": "fixed"
