@@ -61,6 +61,12 @@
     color: var(--bs-body-color);
 }
 
+@media screen and (max-width: 960px){
+    .home-searchbar #search-bar {
+        font-size: 12px;
+    }
+}
+
 .home-sidebar {
     width: 1px;
     max-width: 80%;
@@ -126,9 +132,9 @@
     }
     .sidebar-link {
         width: 100%;
-        justify-content: left;
-        padding: 20px 10px;
-        text-align: center;
+        justify-content: center;
+        text-align: left;
+        padding: 20px 3rem;
         font-size: large;
     }
     .sidebar-link img {
