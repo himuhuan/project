@@ -86,6 +86,12 @@ let backgroundBoxes = document.getElementsByClassName("bgbox");
 let bgIndex = 0;
 
 function autoPlay() {
+    for (let i = 1; i < backgroundBoxes.length; i++) {
+        if (!backgroundBoxes[i].complete) {
+            console.log(`image ${i} not load`);
+            return;
+        }
+    }
     backgroundBoxes[bgIndex].classList.remove("bgbox-show");
     bgIndex++;
     bgIndex = bgIndex % backgroundBoxes.length;
@@ -95,7 +101,6 @@ function autoPlay() {
 setInterval(autoPlay, 15000);
 
 function timer() {
-    let date = new Date();
     let min = String(new Date().getMinutes()).padStart(2, '0');
     let hour = String(new Date().getHours()).padStart(2, '0');
     return `${hour} : ${min}`;
