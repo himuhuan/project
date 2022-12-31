@@ -34,6 +34,7 @@
     align-items: center;
     justify-content: center;
     width: 250px;
+    max-width: 80%;
     height: 45px;
     border-radius: 20px;
     color: var(--bs-body-bg);
@@ -62,6 +63,7 @@
 
 .home-sidebar {
     width: 1px;
+    max-width: 80%;
     padding: 10px 0;
     height: 100%;
     background: var(--bs-body-bg);
@@ -122,9 +124,19 @@
     .home-sidebar {
         display: none;
     }
+    .sidebar-link {
+        width: 100%;
+        justify-content: left;
+        padding: 20px 10px;
+        text-align: center;
+        font-size: large;
+    }
+    .sidebar-link img {
+        display: none;
+    }
 }
 
-.home-timer {
+.min-timer {
     position: absolute;
     color: #000000;
     text-shadow: 0 0 30px rgb(0 0 0 / 40%);
@@ -146,4 +158,18 @@
     justify-content: start;
     background: transparent;
     height: 100vh;
+}
+
+.mobile-menu-button {
+    display: none;
+}
+
+@media screen and (max-width: 960px) {
+    .mobile-menu-button {
+        display: inline-block;
+        float: right;
+        outline: none;
+        border: none;
+        background: transparent;
+    }
 }

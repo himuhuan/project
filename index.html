@@ -18,8 +18,8 @@
         <a class="navbar-brand font-monospace text-center" href="#">
             Magimu
         </a>
-        <div class="container-fluid">
-            <ul class="navbar-nav collapse">
+        <div class="container-sm collapse">
+            <ul class="navbar-nav">
                 <li class="nav-item mx-lg-4 dropdown">
                     <a class="nav-link dropdown-toggle hvr-wobble-vertical" role="button" id="nav-index" href="#"> 索引 </a>
                     <ul class="dropdown-menu shadow-sm">
@@ -35,6 +35,9 @@
                 <li class="nav-item mx-lg-4"><a class="nav-link hvr-wobble-horizontal" href="#"> 关于 </a></li>
             </ul>
         </div>
+        <button class="mobile-menu-button" id="nav-menu-button">
+            <img src="images/menu.png" height="32" width="32" alt>
+        </button>
     </nav>
     <div class="cookie-banner opacity-85">
         <p>
@@ -106,7 +109,7 @@
 
 <main>
     <div class="sub-page-center">
-        <div class="home-timer"> 13:13 </div>
+        <div class="min-timer" id="home-timer"> ??:?? </div>
         <div class="home-searchbar">
             <label for="search-bar"></label>
             <input type="text" placeholder="输入内容后回车以进行搜索。" id="search-bar" name="home-search" size="">

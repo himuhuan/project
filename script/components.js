@@ -4,20 +4,42 @@
 const mQuery = window.matchMedia('(max-width: 960px)')
 
 $(document).ready(function () {
+
+    /* mobile nav */
+    $("#nav-menu-button").click(function (event) {
+        $("#nav-sidebar").css({
+            "display": "flex",
+            "width": "400px"
+        });
+        event.stopPropagation();
+    })
+    /* timer */
+    updateTimer();
+
+    /* sidebar */
     $("#nav-sidebar").mouseover(function () {
-        $("#nav-sidebar").css({
-            "width": "150px",
-            "height": "100vh",
-            "top": "0",
-            "position": "fixed"
-        });
+        if (mQuery.matches) {
+            $("#nav-sidebar").css({
+                "display": "flex",
+                "width": "400px"
+            });
+        } else {
+            $("#nav-sidebar").css({
+                "width": "150px",
+                "height": "100vh",
+                "top": "0",
+                "position": "fixed"
+            });
+        }
     }).mouseout(function () {
-        $("#nav-sidebar").css({
-            "width": "0px",
-            "height": "100%",
-            "top": "0",
-            "position": "fixed"
-        });
+        if (!mQuery.matches) {
+            $("#nav-sidebar").css({
+                "width": "0px",
+                "height": "100%",
+                "top": "0",
+                "position": "fixed"
+            });
+        }
     });
 
     $("#close-cookie-banner").click(function () {
@@ -59,6 +81,7 @@ $(document).ready(function () {
             "transform" : "scale(1.0)",
             "filter" : "blur(0px)"
         });
+        $(".home-sidebar").css("width", "0px");
     })
 });
 
@@ -75,3 +98,15 @@ function autoPlay() {
 
 setInterval(autoPlay, 15000);
 
+function timer() {
+    let date = new Date();
+    let min = String(new Date().getMinutes()).padStart(2, '0');
+    let hour = String(new Date().getHours()).padStart(2, '0');
+    return `${hour} : ${min}`;
+}
+
+function updateTimer() {
+    $("#home-timer").text(timer());
+}
+
+setInterval(updateTimer, 10000);
