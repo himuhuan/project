@@ -19,6 +19,8 @@ $nav-link-font-weight: 100;
 $dropdown-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 $dropdown-dark-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 $nav-link-font-size: 1.1rem;
+$navbar-dark-color: #ffffff;
+$navbar-dark-hover-color: $primary;
 $nav-link-color: #000000;
 $nav-link-padding-y: 1rem;
 $navbar-brand-font-size: 1.5rem;
@@ -37,7 +39,7 @@ $dropdown-padding-x: 10px;
   opacity: 0.85 !important;
 }
 
-@media screen and (max-width: 960px){
+@media screen and (max-width: 768px){
   .collapse {
     display: none;
   }

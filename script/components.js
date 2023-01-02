@@ -1,7 +1,7 @@
 // noinspection JSJQueryEfficiency
 
 /* According media screen to change some style */
-const mQuery = window.matchMedia('(max-width: 960px)')
+const mQuery = window.matchMedia('(max-width: 768px)');
 /* preload background */
 let img = new Image();
 img.src = "../images/backgrounds/Dark/background1.jpg";
@@ -9,6 +9,24 @@ img.src = "../images/backgrounds/Dark/background1.jpg";
 /* load theme according to time */
 // 0 -- Light, 1 -- Dark;
 let gWebsiteThemeFlag = 0;
+
+/**
+ * daily words gen.
+ * Himu 奇妙の伤感文学
+ */
+let dailyWords = [
+    "奇迹、魔法，都是存在的",
+    "要是别人说怀有希望是错误的事，不管几次我都一定会否定这句话，不管到什么时候。",
+    "因为我找到了我的愿望，即使赌上性命去战斗也无所谓，我有了可以这样想的理由。",
+    "无法回避的毁灭与叹息，一切都由你来颠覆即可，你具有的正是为此而生的力量。",
+    `“要拯救你”这是我最初的心意，而到如今，这是最后留下的唯一路标。`,
+    "我对普通的人类没有兴趣！",
+    "如果樱花掉落的速度是每秒五厘米，那么两颗心要多久才能靠近？",
+    "一个人要坚强的活下去，是很难的吧。",
+    "自己喜欢的人的名字，不管什么状况都听得见吧！",
+    "能哭的地方，只有厕所，和爸爸的怀里。",
+    "将爱形容为美丽的，是不了解爱的人；将爱形容为丑陋的，是自以为了解爱的人。"
+];
 
 function changeTheme() {
     changeBgBoxImage();
@@ -32,8 +50,8 @@ function changeTheme() {
 }
 
 $(document).ready(function () {
-    let now = new Date();
-    if (now.getHours() >= 12) {
+    let hour = new Date().getHours();
+    if (hour >= 17 || hour <= 5) {
         console.log("set to dark");
         changeTheme();
         gWebsiteThemeFlag = 1;
@@ -82,13 +100,16 @@ $(document).ready(function () {
         $(".dropdown-menu").slideUp(600);
     }).mousedown(function () {
         $(".dropdown-menu").slideUp(300);
-    })
+    });
 
     $("#search-bar").click(function (event) {
         if (mQuery.matches) {
             $("#home-timer").css("display", "none");
         }
         $(".home-searchbar").css("width", "500px");
+        $(".daily-words").fadeIn(2000)
+            .text(dailyWords[Math.round(Math.random() * dailyWords.length)]);
+        $(".tip-words").fadeOut("slow");
         $(".bgbox").css({
             "transform": "scale(1.1)",
             "filter": "blur(20px)"
@@ -101,10 +122,6 @@ $(document).ready(function () {
             window.open(url, "_blank");
             $("#search-bar").val("");
         }
-    })
-
-    $("#theme-switch").click(function () {
-        changeTheme();
     });
 
     $(document).click(function () {
@@ -113,6 +130,7 @@ $(document).ready(function () {
             "transform": "scale(1.0)",
             "filter": "blur(0px)"
         });
+        $(".daily-words").css("display", "none");
         $("#home-timer").css("display", "block");
         $(".home-sidebar").css("width", "0px");
     })

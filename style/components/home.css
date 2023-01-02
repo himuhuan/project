@@ -61,7 +61,7 @@
     color: var(--bs-body-color);
 }
 
-@media screen and (max-width: 960px){
+@media screen and (max-width: 768px){
     .home-searchbar #search-bar {
         font-size: 12px;
     }
@@ -152,24 +152,60 @@
     background: transparent;
 }
 
-.sub-page {
-    height: 100vh;
-}
-
-.sub-page-center {
+.home-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: start;
     background: transparent;
-    height: 100vh;
+}
+
+.daily-words {
+    display: none;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: bold;
+    text-shadow: 0 0 30px rgb(0 0 0 / 40%);
+    color: var(--bs-body-color);
+    position: absolute;
+    bottom: 150px;
+}
+
+.daily-words::before {
+    content: "「 ";
+}
+
+.daily-words::after {
+    content: "」";
+}
+
+@media screen and (max-width: 768px){
+    .daily-words {
+        font-size: 12px;
+    }
+}
+
+.tip-words {
+    width: max-content;
+    text-align: center;
+    text-shadow: 0 0 30px rgb(0 0 0 / 40%);
+    font-weight: bold;
+    color: var(--bs-body-color);
+    position: absolute;
+    bottom: 200px;
+}
+
+@media screen and (max-width: 768px){
+    .tip-words {
+        display: none;
+    }
 }
 
 .mobile-menu-button {
     display: none;
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 768px) {
     .mobile-menu-button {
         display: inline-block;
         float: right;

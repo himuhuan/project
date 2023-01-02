@@ -13,7 +13,7 @@
 </head>
 <body>
 
-<header class="sticky-top">
+<header>
     <nav class="navbar opacity-85 navbar-light bg-white shadow-sm navbar-expand-sm px-4 py-0" id="main-nav">
         <a class="navbar-brand font-monospace text-center" href="#">
             Magimu
@@ -31,7 +31,10 @@
                     </ul>
                 </li>
                 <li class="nav-item mx-lg-4"><a class="nav-link hvr-wobble-horizontal" href="#"> <u>登录/注册</u> </a></li>
-                <li class="nav-item mx-lg-4"><a class="nav-link hvr-wobble-horizontal" href="#" id="theme-switch"> 切换主题 </a></li>
+                <li class="nav-item mx-lg-4">
+                    <a class="nav-link hvr-wobble-horizontal"
+                       href="javascript:void(0)" onclick="changeTheme()"> 切换主题 </a>
+                </li>
                 <li class="nav-item mx-lg-4"><a class="nav-link hvr-wobble-horizontal" href="#"> 关于 </a></li>
             </ul>
         </div>
@@ -93,12 +96,12 @@
              width="32">
         工具
     </a>
-    <a href="#" class="sidebar-link hvr-grow">
+    <a href="javascript:void(0)" onclick="changeTheme()" class="sidebar-link hvr-grow" id="sidebar-theme-switch">
         <img src="images/SidebarSettingsLogo.png"
              class="mx-auto"
              alt=""
              width="32">
-        设置
+        切换主题
     </a>
 </nav>
 
@@ -108,12 +111,14 @@
 <img class="bgbox" src="images/backgrounds/Light/background4.jpg" alt="Background">
 
 <main>
-    <div class="sub-page-center">
+    <div class="home-container">
         <div class="min-timer" id="home-timer"> ??:?? </div>
         <div class="home-searchbar">
             <label for="search-bar"></label>
             <input type="text" placeholder="输入内容后回车以进行搜索。" id="search-bar" name="home-search" size="">
         </div>
+        <div class="daily-words"></div>
+        <div class="tip-words"> 不知道从何开始？试着将鼠标滑至左侧。 </div>
     </div>
 </main>
 
