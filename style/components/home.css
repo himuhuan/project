@@ -51,6 +51,7 @@
 
 .home-searchbar #search-bar {
     border: none;
+    width: 200px;
     background: transparent;
     outline: 0;
     text-align: center;
