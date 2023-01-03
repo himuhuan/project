@@ -1,0 +1,115 @@
+/* Created by Himu. */
+
+/**
+ * 我们使用自己的modal样式. 而非bootstrap.
+ * 我们定义的modal都以himu开头
+ */
+
+.himu-modal {
+    z-index: 10000;
+    -webkit-backdrop-filter: blur(10px) saturate(1.5);
+    backdrop-filter: blur(10px) saturate(1.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.himu-modal-container {
+    z-index: 10000;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+
+    top: 10%;
+    bottom: 10%;
+    left: 20%;
+    right: 20%;
+    padding: 0;
+    overflow: auto;
+    border-radius: .3rem;
+    box-shadow: rgb(0 0 0 / 20%) 0 0 10px;
+    background-color: var(--bs-body-bg);
+}
+
+.himu-modal-close-button {
+    position: fixed;
+    padding: 0 3px;
+    top: 10%;
+    right: 18%;
+    display: block;
+    float: right;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    overflow: hidden;
+}
+
+.himu-modal-sidebar {
+    background-color: var(--bs-body-bg);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 18%;
+    min-width: 50px;
+
+    padding: 0;
+    margin: 0;
+}
+
+.himu-modal-heading {
+    padding: 20px;
+    font-weight: 300;
+}
+
+.himu-modal-sidebar-link {
+    width: 100%;
+    padding: 10px 20px;
+    color: var(--bs-body-color);
+    text-decoration: none;
+    transition: all linear .15s;
+}
+
+.himu-modal-sidebar-link:hover {
+    color: var(--bs-primary);
+}
+
+.himu-active-link {
+    color: #ffffff;
+    background-color: var(--bs-primary);
+}
+
+.himu-active-link:hover {
+    color: #ffffff !important;
+}
+
+.himu-modal-tab {
+    display: none;
+}
+
+.himu-show {
+    display: block !important;
+}
+
+.himu-modal-content {
+    overflow: auto;
+    width: 100%;
+}
+
+.himu-modal-tab {
+    padding: 20px;
+}
+
+.himu-modal-content::-webkit-scrollbar {
+    width: 10px;
+}
+
+.himu-modal-content::-webkit-scrollbar-thumb {
+    background-color: rgba(202, 199, 199, 0.85);
+    height: 10px;
+    border-radius: 5px;
+}

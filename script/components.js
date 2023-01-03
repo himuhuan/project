@@ -76,6 +76,7 @@ $(document).ready(function () {
                 "top": "0",
                 "position": "fixed"
             });
+            $("#sidebar-tip").fadeOut("slow");
         }
     }).mouseout(function () {
         if (!mQuery.matches) {
@@ -86,10 +87,6 @@ $(document).ready(function () {
                 "position": "fixed"
             });
         }
-    });
-
-    $("#close-cookie-banner").click(function () {
-        $(".cookie-banner").slideUp(300);
     });
 
     $("#nav-index").click(function () {
@@ -176,6 +173,18 @@ function changeBgBoxImage() {
                 src.replace("Dark", "Light"));
         }
     }
+}
+
+function closeBanner(name) {
+    $(name).slideUp(300);
+}
+
+function showModal(name) {
+    $(name).fadeIn(500);
+}
+
+function hideModal(name) {
+    $(name).fadeOut(300);
 }
 
 setInterval(updateTimer, 10000);

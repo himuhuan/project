@@ -10,7 +10,7 @@ $primary: #ff5568;
 $font-family-monospace: "Fira-Code";
 $btn-font-family: "sans-serif";
 $navbar-light-color: #000000;
-$nav-link-font-weight: 100;
+$nav-link-font-weight: 300;
 $dropdown-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 $dropdown-dark-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 $nav-link-font-size: 1.1rem;
@@ -29,6 +29,10 @@ $dropdown-dark-link-hover-color: $primary;
 
 $dropdown-min-width: 30px;
 $dropdown-padding-x: 10px;
+
+$modal-content-bg: #333333;
+$modal-backdrop-bg: #333333;
+$modal-header-border-color: #343A40;
 
 .opacity-85 {
   opacity: 0.85 !important;

@@ -16,16 +16,6 @@
     opacity: 1;
 }
 
-.bgbox-word {
-    color: #ffffff;
-    font-size: 14px;
-    text-align: center;
-    font-weight: bold;
-
-    position: absolute;
-    bottom: 30px;
-}
-
 /** searchbar code refer to https://limestart.cn/ */
 .home-searchbar {
     display: flex;
@@ -71,7 +61,6 @@
 .home-sidebar {
     width: 1px;
     max-width: 80%;
-    padding: 10px 0;
     height: 100%;
     background: var(--bs-body-bg);
 
@@ -182,6 +171,7 @@
 
 @media screen and (max-width: 768px){
     .daily-words {
+        bottom: 50px;
         font-size: 12px;
     }
 }

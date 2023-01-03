@@ -1,0 +1,37 @@
+/* 我们使用自己编写的card，而非bs */
+.himu-card {
+    display: flex;
+    flex-direction: column;
+    width: max-content;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: rgb(0 0 0 / 20%) 0 0 3px;
+}
+
+.himu-card-body {
+    padding: 0;
+    margin: 0;
+}
+
+.himu-card-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: var(--bs-body-color);
+    width: 100%;
+    border-radius: 10px;
+    padding: 5px 10px;
+
+    transition: background-color .3s;
+}
+
+.himu-card-link:hover {
+    color: var(--bs-primary);
+    background-color: rgba(223, 223, 223, 0.25);
+}
+
+.himu-card-link:after {
+    float: right;
+    content: url("../../images/right-link.png");
+}
