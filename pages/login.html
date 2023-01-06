@@ -7,28 +7,89 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link type="text/css" rel="stylesheet" href="../style/bootstrap-magimu-theme.css"/>
+    <link type="text/css" rel="stylesheet" href="../style/hover-min.css"/>
+
     <link type="text/css" rel="stylesheet" href="../style/components/login.css"/>
+    <link type="text/css" rel="stylesheet" href="../style/components/home.css"/>
+    <link type="text/css" rel="stylesheet" href="../style/components/card.css"/>
+    <link type="text/css" rel="stylesheet" href="../style/components/cookie-banner.css"/>
     <title> 登录至 Magimu </title>
 </head>
 <body>
-<div class="container w-50 py-5 login-border mt-5">
-    <h2>登录到Magimu</h2>
-    <form action="">
-        <div class="mb-3 mt-3">
-            <label for="email">电子邮件：</label>
-            <input type="email" class="form-control" id="email" placeholder="请输入电子邮件地址" name="email">
+
+<header>
+    <nav class="navbar opacity-85 navbar-light bg-white shadow-sm navbar-expand-sm px-4 py-0" id="main-nav">
+        <a class="navbar-brand font-monospace text-center" href="../index.html">
+            Magimu
+        </a>
+        <div class="collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item mx-lg-4 dropdown">
+                    <a class="nav-link dropdown-toggle hvr-wobble-vertical" role="button" id="nav-index" href="#">
+                        索引 </a>
+                    <ul class="dropdown-menu shadow-sm" id="dropdown-list">
+                        <li><a class="dropdown-item hvr-grow" href="#"> 动画 </a></li>
+                        <li><a class="dropdown-item hvr-grow" href="#"> 漫画 </a></li>
+                        <li><a class="dropdown-item hvr-grow" href="#"> 本子 </a></li>
+                        <li><a class="dropdown-item hvr-grow" href="#"> 游戏 </a></li>
+                        <li><a class="dropdown-item hvr-grow" href="#"> 工具 </a></li>
+                    </ul>
+                </li>
+                <li class="nav-item mx-lg-4">
+                    <a class="nav-link hvr-wobble-horizontal" href="../pages/login.html"> <u>登录/注册</u> </a>
+                </li>
+                <li class="nav-item mx-lg-4">
+                    <a class="nav-link hvr-wobble-horizontal"
+                       href="javascript:void(0)" onclick="changeTheme()"> 切换主题 </a>
+                </li>
+            </ul>
         </div>
-        <div class="mb-3">
-            <label for="pwd">密码：</label>
-            <input type="password" class="form-control" id="pwd" placeholder="请输入密码" name="pswd">
+        <button class="mobile-menu-button" id="nav-menu-button">
+            <img src="../images/menu.png" height="32" width="32" alt>
+        </button>
+    </nav>
+    <div class="banner-fluid opacity-85" id="cookie-banner">
+        <p>
+            <b class="text-primary"> 注意：</b> 当前注册/登录功能不可用，本页面只用于演示。
+        </p>
+        <button type="button" class="btn btn-outline-primary btn-sm" onclick="closeBanner('#cookie-banner')">
+            好的，我明白了
+        </button>
+    </div>
+</header>
+
+<img class="bgbox bgbox-show" src="../images/backgrounds/Login/LoginBackground.jpg" alt/>
+
+<div class="login-container opacity-85 shadow-sm font-monospace">
+    <div class="himu-card w-100 h-100">
+        <div class="himu-card-body">
+            <h2 class="text-center"> Magimu Account </h2>
+            <form action="">
+                <div class="mb-3 mt-3">
+                    <label for="email">Magimu 账户：</label>
+                    <input type="email" class="form-control" id="email" placeholder="账户名" name="name">
+                </div>
+                <div class="mb-3">
+                    <label for="pwd">密码：</label>
+                    <input type="password" class="form-control" id="pwd" placeholder="密码" name="pwd">
+                </div>
+                <div class="form-check mb-5">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" name="allow">
+                        是的，我仔细阅读并同意了 <a href="">「Magimu 隐私条款」</a>内的所有内容。
+                    </label>
+                </div>
+                <button type="submit" class="w-100 btn btn-primary text-white float-end">登录</button>
+            </form>
         </div>
-        <div class="form-check mb-3">
-            <label class="form-check-label">
-                <input class="form-check-input" type="checkbox" name="remember">记住我
-            </label>
-        </div>
-        <button type="submit" class="btn btn-outline-primary float-end  ">提交</button>
-    </form>
+    </div>
 </div>
+
+<!--- Scripts --->
+<script src="../script/lib/jquery-3.6.3.min.js"></script>
+<script src="../script/lib/jquery.cookie.js"></script>
+<script src="../script/lib/bootstrap.bundle.min.js"></script>
+<script src="../script/components.js"></script>
+<script> setTheme(); </script>
 </body>
 </html>

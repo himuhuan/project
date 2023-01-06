@@ -23,7 +23,8 @@
         <div class="collapse">
             <ul class="navbar-nav">
                 <li class="nav-item mx-lg-4 dropdown">
-                    <a class="nav-link dropdown-toggle hvr-wobble-vertical" role="button" id="nav-index" href="#"> 索引 </a>
+                    <a class="nav-link dropdown-toggle hvr-wobble-vertical" role="button" id="nav-index" href="#">
+                        索引 </a>
                     <ul class="dropdown-menu shadow-sm" id="dropdown-list">
                         <li><a class="dropdown-item hvr-grow" href="#"> 动画 </a></li>
                         <li><a class="dropdown-item hvr-grow" href="#"> 漫画 </a></li>
@@ -32,7 +33,9 @@
                         <li><a class="dropdown-item hvr-grow" href="#"> 工具 </a></li>
                     </ul>
                 </li>
-                <li class="nav-item mx-lg-4"><a class="nav-link hvr-wobble-horizontal" href="#"> <u>登录/注册</u> </a></li>
+                <li class="nav-item mx-lg-4">
+                    <a class="nav-link hvr-wobble-horizontal" href="./pages/login.html"> <u>登录/注册</u> </a>
+                </li>
                 <li class="nav-item mx-lg-4">
                     <a class="nav-link hvr-wobble-horizontal"
                        href="javascript:void(0)" onclick="changeTheme()"> 切换主题 </a>
@@ -53,7 +56,8 @@
             继续浏览表明您已同意了我们的 <u>「Cookie 隐私协议」</u>。
             本网站收录的部分网页可能包含令人不适的内容。在任意情况下，都请不要在这些网站输入您的敏感信息。</p>
         <button type="button" class="btn btn-outline-primary btn-sm" onclick="closeBanner('#cookie-banner')">
-            好的，我明白了 </button>
+            好的，我明白了
+        </button>
     </div>
 </header>
 
@@ -117,13 +121,13 @@
 
 <main>
     <div class="home-container">
-        <div class="min-timer" id="home-timer"> ??:?? </div>
+        <div class="min-timer" id="home-timer"> ??:??</div>
         <div class="home-searchbar">
             <label for="search-bar"></label>
             <input type="text" placeholder="输入内容后回车以进行搜索。" id="search-bar" name="home-search" size="">
         </div>
         <div class="daily-words"></div>
-        <div class="tip-words" id="sidebar-tip"> 不知道从何开始？试着将鼠标滑至左侧。 </div>
+        <div class="tip-words" id="sidebar-tip"> 不知道从何开始？试着将鼠标滑至左侧。</div>
     </div>
 </main>
 
@@ -131,36 +135,40 @@
     <div class="himu-modal-container shadow-sm">
         <div class="himu-modal-sidebar shadow-sm">
             <h3 class="himu-modal-heading"> 关于 </h3>
-            <a class="himu-modal-sidebar-link himu-active-link" href="#"> 版权声明 </a>
-            <a class="himu-modal-sidebar-link" href="#"> 开源协议 </a>
-            <a class="himu-modal-sidebar-link" href="#"> 反馈 </a>
-            <a class="himu-modal-sidebar-link" href="#"> 实验报告 </a>
+            <a class="himu-modal-sidebar-link himu-active-link" href="javascript:void(0);"
+               id="modal-copyright-tab-link"
+               onclick="setActiveModalTab('#modal-copyright-tab')">
+                版权声明
+            </a>
+            <a class="himu-modal-sidebar-link" href="javascript:void(0);"
+               id="modal-license-tab-link"
+               onclick="setActiveModalTab('#modal-license-tab')">
+                开源协议
+            </a>
+            <a class="himu-modal-sidebar-link" href="javascript:void(0);"
+               onclick="setActiveModalTab('#modal-feedback-tab')" id="modal-feedback-tab-link">
+                反馈
+            </a>
+            <a class="himu-modal-sidebar-link" href="javascript:void(0);"
+               onclick="setActiveModalTab('#modal-report-tab')" id="modal-report-tab-link">
+                实验报告
+            </a>
         </div>
         <div class="himu-modal-content w-100">
-            <div class="himu-modal-tab himu-show" id="modal-copyright-tab">
+            <div class="himu-modal-tab" id="modal-copyright-tab">
                 <h3 class="my-3"> 版权声明 </h3>
-                <div class="himu-card w-100 font-monospace">
+                <div class="himu-card my-3 w-100 font-monospace">
                     <div class="himu-card-body">
                         <h4> 制作人员 </h4>
                         <ul class="my-2">
-                            <li> <b>Maintainer</b>: Himu [mmpliuhuan@outlook.com] (Github@himuhuan) <br> </li>
-                            <li> BlueDream </li>
+                            <li><b>Maintainer</b>: Himu [mmpliuhuan@outlook.com] (Github@himuhuan) <br></li>
+                            <li> BlueDream</li>
                         </ul>
                         版权所有(c) 2022-2023 Himu，保留所有权利。<br>
                         部分代码借鉴于互联网，代码参见 Github。<br><br>
                         本网站发布于github pages，但在<a href="https://myblog.himu.live/">myblog.himu.live</a>可用。<br>
-                        我们在myblog.himu.live上启用了Cloudflare CDN加速，在访问出现问题时，我们建议访问 myblog.himu.live 而非 github pages。
-                    </div>
-                </div>
-                <div class="himu-card my-3 w-100">
-                    <div class="himu-card-body">
-                        <h4> 关于 </h4>
-                        本网站的诞生离不开下列开源项目/库的支持：<br>
-                        <ul class="my-2">
-                            <li> Bootstrap 5 </li>
-                            <li> Cover.css </li>
-                            <li> jQuery </li>
-                        </ul>
+                        我们在myblog.himu.live上启用了Cloudflare CDN加速，在访问出现问题时，我们建议访问 myblog.himu.live
+                        而非 github pages。
                     </div>
                 </div>
                 <div class="himu-card w-100">
@@ -169,6 +177,47 @@
                         <a class="himu-card-link" href="https://github.com/himuhuan/project">
                             Github 代码
                         </a>
+                    </div>
+                </div>
+            </div>
+            <div class="himu-modal-tab" id="modal-license-tab">
+                <h3> 开源许可 </h3>
+                <p class="m-3"> 本网站源代码开源，遵守 Apache 2.0 开源协议 </p>
+                <div class="himu-card w-100">
+                    <div class="himu-card-body">
+                        <a class="himu-card-link" href="https://apache.org/licenses/LICENSE-2.0.txt">
+                            参见 Apache 2.0 开源协议
+                        </a>
+                    </div>
+                </div>
+                <div class="himu-card my-3 w-100">
+                    <div class="himu-card-body">
+                        <h4> 第三方支持 </h4>
+                        本网站的诞生离不开下列开源项目/库的支持：<br>
+                        <ul class="my-2">
+                            <li> Bootstrap 5</li>
+                            <li> Cover.css</li>
+                            <li> jQuery</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="himu-modal-tab" id="modal-feedback-tab">
+                <h3 class="my-3"> Feedback </h3>
+                <p> 您可以访问以下页面填写本网站的用户反馈，也可以将您的宝贵意见发送至邮箱 <u>mmpliuhuan@outlook.com</u> </p>
+                <div class="himu-card w-100">
+                    <div class="himu-card-body">
+                        <a class="himu-card-link" href="#"> 进入反馈页面 </a>
+                    </div>
+                </div>
+            </div>
+            <div class="himu-modal-tab" id="modal-report-tab">
+                <h3 class="my-3"> Web 作业网页报告 </h3>
+                <p> 以下文档对本站的主要特性（包括第三方库的使用、js对页面的加成、响应式布局的使用、以及页面的各类小细节）
+                    进行了概述，注意：该报告只在 PC 端 可见。 </p>
+                <div class="himu-card w-100">
+                    <div class="himu-card-body">
+                        <a class="himu-card-link" href="#"> 实验报告 </a>
                     </div>
                 </div>
             </div>
@@ -182,7 +231,9 @@
 
 <!--- Scripts --->
 <script src="./script/lib/jquery-3.6.3.min.js"></script>
+<script src="./script/lib/jquery.cookie.js"></script>
 <script src="./script/lib/bootstrap.bundle.min.js"></script>
 <script src="./script/components.js"></script>
+<script src="./script/home.js"></script>
 </body>
 </html>
