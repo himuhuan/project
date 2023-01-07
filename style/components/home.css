@@ -20,8 +20,8 @@
 /** searchbar code refer to https://limestart.cn/ */
 .home-searchbar {
     display: flex;
-    position: absolute;
-    top: 40vh;
+    position: relative;
+    top: 30vh;
     align-items: center;
     justify-content: center;
     width: 250px;
@@ -133,10 +133,10 @@
 }
 
 .min-timer {
-    position: absolute;
+    position: relative;
     color: var(--bs-body-color);
     text-shadow: 0 0 30px rgb(0 0 0 / 40%);
-    top: 200px;
+    top: 28vh;
     font-size: 3rem;
     font-weight: bolder;
     font-family: "Consolas Font", sans-serif;
