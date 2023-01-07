@@ -15,8 +15,16 @@
 }
 
 .tip-pop h5::before {
-    content: url("../../images/tips.png");
+    content: url("../../images/Tips.png");
     vertical-align: text-top;
     display: inline-block;
+}
+
+@media screen and (max-width: 768px) {
+    .tip-pop {
+        width: 100%;
+        right: 0;
+        bottom: 0;
+    }
 }
 
