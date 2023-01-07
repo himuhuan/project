@@ -20,3 +20,11 @@
     display: inline-block;
 }
 
+@media screen and (max-width: 768px) {
+    .tip-pop {
+        width: 100%;
+        right: 0;
+        bottom: 0;
+    }
+}
+
