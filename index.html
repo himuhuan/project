@@ -10,13 +10,15 @@
     <link type="text/css" rel="stylesheet" href="style/components/home.css"/>
     <link type="text/css" rel="stylesheet" href="style/components/modal.css"/>
     <link type="text/css" rel="stylesheet" href="style/components/card.css"/>
+    <link type="text/css" rel="stylesheet" href="style/components/tip-pop.css"/>
     <link type="text/css" rel="stylesheet" href="style/hover-min.css"/>
     <title> Magimu Nav. 收集开心一刻 ^_^ </title>
 </head>
 <body>
 
 <header>
-    <nav class="navbar opacity-85 navbar-light bg-white shadow-sm navbar-expand-sm px-4 py-0" id="main-nav">
+    <nav class="navbar opacity-85 navbar-light bg-white shadow-sm navbar-expand-sm px-4 py-0 bg-transition"
+         id="main-nav">
         <a class="navbar-brand font-monospace text-center" href="#">
             Magimu
         </a>
@@ -50,18 +52,19 @@
             <img src="images/menu.png" height="32" width="32" alt>
         </button>
     </nav>
-    <div class="banner-fluid opacity-85" id="cookie-banner">
+    <div class="banner-fluid opacity-85 bg-transition" id="cookie-banner">
         <p>
             <b>注意：</b>
             继续浏览表明您已同意了我们的 <u>「Cookie 隐私协议」</u>。
             本网站收录的部分网页可能包含令人不适的内容。在任意情况下，都请不要在这些网站输入您的敏感信息。</p>
-        <button type="button" class="btn btn-outline-primary btn-sm" onclick="closeBanner('#cookie-banner')">
+        <button type="button" class="btn btn-outline-primary btn-sm"
+                onclick="closeBanner('#cookie-banner'); $('#start-tip').fadeIn();">
             好的，我明白了
         </button>
     </div>
 </header>
 
-<nav id="nav-sidebar" class="home-sidebar">
+<nav id="nav-sidebar" class="home-sidebar bg-transition">
     <a href="#" class="sidebar-logo hvr-grow">
         <img src="./images/HimuFace.jpg"
              class="rounded-circle mx-auto"
@@ -127,7 +130,15 @@
             <input type="text" placeholder="输入内容后回车以进行搜索。" id="search-bar" name="home-search" size="">
         </div>
         <div class="daily-words mt-5">  </div>
-        <div class="tip-words" id="sidebar-tip"> 不知道从何开始？试着将鼠标滑至左侧。</div>
+    </div>
+    <div class="tip-pop bg-transition" id="start-tip">
+        <h5 class="mb-1 fw-bold"> 提示 </h5>
+        您可以将鼠标移至左侧打开侧边栏进行下一步操作。
+        关于本Web作业的说明参见<b> “关于 -> 实验报告” </b>
+        <button class="btn btn-outline-primary float-end mt-2 w-50 btn-sm"
+                onclick="$('#start-tip').fadeOut();">
+            好的
+        </button>
     </div>
 </main>
 

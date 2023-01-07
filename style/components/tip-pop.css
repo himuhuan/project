@@ -1,0 +1,22 @@
+.tip-pop {
+    position: absolute;
+    display: none;
+    right: 30px;
+    bottom: 10px;
+    width: 45vh;
+    z-index: 10000;
+    overflow: hidden;
+    background-color: var(--bs-body-bg);
+    border-radius: 5px;
+    box-shadow: rgb(0 0 0 / 20%) 0 0 3px;
+    padding: 10px 8px;
+
+    font-size: 13px;
+}
+
+.tip-pop h5::before {
+    content: url("../../images/tips.png");
+    vertical-align: text-top;
+    display: inline-block;
+}
+

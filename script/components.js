@@ -240,4 +240,3 @@ function preloadBackground() {
         "../images/backgrounds/Login/LoginBackground.jpg"
     );
 }
-

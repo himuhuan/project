@@ -38,6 +38,10 @@ $modal-header-border-color: #343A40;
   opacity: 0.85 !important;
 }
 
+.bg-transition {
+  transition: background-color linear .3s;
+}
+
 @media screen and (max-width: 768px){
   .collapse {
     display: none;

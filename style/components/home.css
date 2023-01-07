@@ -53,6 +53,10 @@
     color: var(--bs-body-color);
 }
 
+.home-searchbar:hover {
+    width: 500px !important;
+}
+
 @media screen and (max-width: 768px){
     .home-searchbar #search-bar {
         font-size: 12px;
@@ -158,8 +162,8 @@
     font-weight: bold;
     text-shadow: 0 0 30px rgb(0 0 0 / 40%);
     color: var(--bs-body-color);
-    position: absolute;
-    bottom: 150px;
+    position: relative;
+    top: 45vh;
 }
 
 .daily-words::before {
@@ -172,7 +176,6 @@
 
 @media screen and (max-width: 768px){
     .daily-words {
-        bottom: 50px;
         font-size: 12px;
     }
 }
@@ -183,8 +186,8 @@
     text-shadow: 0 0 30px rgb(0 0 0 / 40%);
     font-weight: bold;
     color: var(--bs-body-color);
-    position: absolute;
-    bottom: 200px;
+    position: relative;
+    top: 45vh;
 }
 
 @media screen and (max-width: 768px){
