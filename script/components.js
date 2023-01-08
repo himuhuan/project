@@ -222,12 +222,16 @@ function setActiveSubPageTab(name) {
     $('.sub-page-tab').fadeOut('slow').addClass('d-none');
     if (name !== '#home-tab') {
         stopAutoPlay = true;
-        if (!mScreenWidth.matches)
+        if (mScreenWidth.matches)
+            $('.bgbox').addClass('d-none');
+        else
             $('#main-nav').slideUp(300);
         $('#cookie-banner').slideUp();
     } else {
         stopAutoPlay = false;
-        if (!mScreenWidth.matches)
+        if (mScreenWidth.matches)
+            $('.bgbox').removeClass('d-none');
+        else
             $('#main-nav').slideDown();
     }
     $(name).fadeIn().removeClass('d-none').addClass('d-flex');
