@@ -7,4 +7,6 @@ $(document).ready(function () {
     preloadBackground();
     updateTimer();
     setTheme();
+    setActiveSubPageTab('#home-tab');
+    setTimeout(function () { $('#start-tip').slideDown('slow'); }, 3000);
 });

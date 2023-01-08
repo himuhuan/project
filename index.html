@@ -1,3 +1,8 @@
+<!---
+    Copyright(c) 2022-2023 Magimu.
+---->
+
+<!---- Created & Coded by Himu. ----->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,15 +41,15 @@
                     </ul>
                 </li>
                 <li class="nav-item mx-lg-4">
-                    <a class="nav-link hvr-wobble-horizontal" href="./pages/login.html"> <u>登录/注册</u> </a>
+                    <a class="nav-link hvr-underline-from-center" href="./pages/login.html"> <u>登录/注册</u> </a>
                 </li>
                 <li class="nav-item mx-lg-4">
-                    <a class="nav-link hvr-wobble-horizontal"
+                    <a class="nav-link hvr-underline-from-center"
                        href="javascript:void(0)" onclick="changeTheme()"> 切换主题 </a>
                 </li>
                 <li class="nav-item mx-lg-4">
-                    <a class="nav-link hvr-wobble-horizontal"
-                       href="javascript:void(0);" onclick="showModal('#about-modal')"> 关于 </a>
+                    <a class="nav-link hvr-underline-from-center"
+                       href="javascript:void(0);" onclick="showModal('#about-modal')">&nbsp; 关于 &nbsp; </a>
                 </li>
             </ul>
         </div>
@@ -58,14 +63,14 @@
             继续浏览表明您已同意了我们的 <u>「Cookie 隐私协议」</u>。
             本网站收录的部分网页可能包含令人不适的内容。在任意情况下，都请不要在这些网站输入您的敏感信息。</p>
         <button type="button" class="btn btn-outline-primary btn-sm"
-                onclick="closeBanner('#cookie-banner'); $('#start-tip').fadeIn();">
+                onclick="closeBanner('#cookie-banner');">
             好的，我明白了
         </button>
     </div>
 </header>
 
-<nav id="nav-sidebar" class="home-sidebar bg-transition">
-    <a href="#" class="sidebar-logo hvr-grow">
+<nav id="nav-sidebar" class="home-sidebar">
+    <a href="javascript:void(0)" onclick="setActiveSubPageTab('#home-tab')" class="sidebar-logo hvr-grow">
         <img src="./images/HimuFace.jpg"
              class="rounded-circle mx-auto"
              width="64px"
@@ -73,7 +78,7 @@
              alt="">
         Himu
     </a>
-    <a href="#" class="sidebar-link hvr-grow">
+    <a href="javascript:void(0)" onclick="setActiveSubPageTab('#anime-tab')" class="sidebar-link hvr-grow">
         <img src="images/SidebarAnimeLogo.png"
              class="mx-auto"
              alt=""
@@ -123,22 +128,104 @@
 <img class="bgbox" src="images/backgrounds/Light/background4.jpg" alt="Background">
 
 <main>
-    <div class="home-container">
-        <div class="min-timer" id="home-timer"> ??:??</div>
+    <div class="sub-page-tab" id="home-tab">
+        <div class="min-timer" id="home-timer">??:??</div>
         <div class="home-searchbar">
             <label for="search-bar"></label>
             <input type="text" placeholder="输入内容后回车以进行搜索。" id="search-bar" name="home-search" size="">
         </div>
         <div class="daily-words mt-5">  </div>
     </div>
-    <div class="tip-pop bg-transition" id="start-tip">
-        <h5 class="mb-1 fw-bold"> 提示 </h5>
-        您可以将鼠标移至左侧打开侧边栏进行下一步操作。
-        关于本Web作业的说明参见<b> “关于 -> 实验报告” </b>
-        <button class="btn btn-outline-primary float-end mt-2 w-50 btn-sm"
-                onclick="$('#start-tip').fadeOut();">
-            好的
-        </button>
+    <div class="sub-page-tab" id="anime-tab">
+        <div class="sub-page-tab-backdrop">  </div>
+        <div class="sub-page-tab-container bg-transition">
+            <div class="sub-page-tab-body">
+                <div class="himu-card my-3 w-100">
+                    <div class="himu-card-body">
+                        <h2 class="himu-heading fw-bold"> 动画 (Anime) </h2>
+                        <img class="float-end m-2 shadow-sm"
+                             src="./images/AkemiHumora.webp" width="134" height="178" alt/>
+                        <p> 日语中的“アニメーション”是一个外来语，与之相对应的是英语中的“animation”一词，
+                            日语发音为“アニメーション（罗马音animeshon）”在同时，
+                            日语片假名“アニメーション”的省略形式为“アニメ”，对应的罗马字母是与“anima”极为相近的“anime”。
+                            因此，Anime在日本被作为“动画”这一艺术形式的代称。 </p>
+                        <p> 本网站收录部分了国内/外著名的网站，您可以尽情体验 Anime 的乐趣。 </p>
+                    </div>
+                </div>
+                <div class="himu-card w-100">
+                    <div class="himu-card-body">
+                        <h4> 国内 </h4>
+                        <div class="row">
+                            <div class="col-xxl-4 my-3 my-xxl-4">
+                                <a class="himu-card h-100 w-100 hvr-shadow" href="#">
+                                    <div class="d-flex">
+                                        <img class="rounded-circle" src="https://www.agemys.net/favicon.ico" width="32" height="32" alt=""/>
+                                        <div class="mx-xxl-4 mx-2">
+                                            <h5 class="fw-bold"> Age 动画 </h5>
+                                            <p class="small m-0 p-0"> 免费、可在线观看。 </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xxl-4 my-3 my-xxl-4">
+                                <a class="himu-card h-100 w-100 hvr-shadow" href="#">
+                                    <div class="d-flex">
+                                        <img class="rounded-circle"
+                                             src="https://www.gqdm.net/template/conch/asset/img/favicon.png" width="32"
+                                             height="32" alt=""/>
+                                        <div class="mx-xxl-4 mx-2">
+                                            <h5 class="fw-bold"> 异世界动漫 </h5>
+                                            <p class="small m-0 p-0"> 免费、可在线观看、下载，但是有时无法访问。 </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xxl-4 my-3 my-xxl-4">
+                                <a class="himu-card h-100 w-100 hvr-shadow" href="#">
+                                    <div class="d-flex">
+                                        <img class="rounded-circle"
+                                             src="https://www.bilibili.com/favicon.ico?v=1" width="32"
+                                             height="32" alt=""/>
+                                        <div class="mx-xxl-4 mx-2">
+                                            <h5 class="fw-bold"> Bilibili </h5>
+                                            <p class="small m-0 p-0">哔哩哔哩 (゜-゜)つロ 干杯~-bilibili</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xxl-4 my-3 my-xxl-4">
+                                <a class="himu-card h-100 w-100 hvr-shadow" href="#">
+                                    <div class="d-flex">
+                                        <img class="rounded-circle"
+                                             src="http://cdn.aixifan.com/ico/favicon.ico"
+                                             width="32" height="32" alt=""/>
+                                        <div class="mx-xxl-4 mx-2">
+                                            <h5 class="fw-bold"> AcFun </h5>
+                                            <p class="small m-0 p-0">
+                                                AcFun弹幕视频网 - 认真你就输啦 (・ω・)ノ- ( ゜- ゜)つロ
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tip-pop" id="start-tip">
+        <div class="tip-pop-body bg-transition">
+            <h5 class="mb-1 fw-bold"> 提示 </h5>
+            <p>您可以将鼠标移至左侧打开侧边栏进行下一步操作，在侧边栏点击头像即可返回本页。
+            关于本Web作业的说明参见<b> “关于 -> 实验报告” </b></p>
+            <button class="btn btn-outline-primary float-end mt-2 w-50 btn-sm"
+                    onclick="$('#start-tip').slideToggle();">
+                好的
+            </button>
+        </div>
     </div>
 </main>
 
@@ -185,7 +272,7 @@
                 <div class="himu-card w-100">
                     <div class="himu-card-body">
                         <h4> 源代码 </h4>
-                        <a class="himu-card-link" href="https://github.com/himuhuan/project">
+                        <a class="himu-card-link-fluid" href="https://github.com/himuhuan/project">
                             Github 代码
                         </a>
                     </div>
@@ -196,7 +283,7 @@
                 <p class="m-3"> 本网站源代码开源，遵守 Apache 2.0 开源协议 </p>
                 <div class="himu-card w-100">
                     <div class="himu-card-body">
-                        <a class="himu-card-link" href="https://apache.org/licenses/LICENSE-2.0.txt">
+                        <a class="himu-card-link-fluid" href="https://apache.org/licenses/LICENSE-2.0.txt">
                             参见 Apache 2.0 开源协议
                         </a>
                     </div>
@@ -218,7 +305,7 @@
                 <p> 您可以访问以下页面填写本网站的用户反馈，也可以将您的宝贵意见发送至邮箱 <u>mmpliuhuan@outlook.com</u> </p>
                 <div class="himu-card w-100">
                     <div class="himu-card-body">
-                        <a class="himu-card-link" href="#"> 进入反馈页面 </a>
+                        <a class="himu-card-link-fluid" href="#"> 进入反馈页面 </a>
                     </div>
                 </div>
             </div>
@@ -228,7 +315,7 @@
                     进行了概述，注意：该报告只在 PC 端 可见。 </p>
                 <div class="himu-card w-100">
                     <div class="himu-card-body">
-                        <a class="himu-card-link" href="#"> 实验报告 </a>
+                        <a class="himu-card-link-fluid" href="#"> 实验报告 </a>
                     </div>
                 </div>
             </div>

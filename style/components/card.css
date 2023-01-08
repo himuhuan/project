@@ -4,12 +4,20 @@
 }
 
 .himu-card {
+    text-decoration: none;
+    color: var(--bs-body-color);
     display: flex;
     flex-direction: column;
     width: max-content;
     padding: 20px;
     border-radius: 5px;
     box-shadow: rgb(0 0 0 / 20%) 0 0 3px;
+    border: 1px solid rgba(58, 59, 61, 0.2);
+    background: var(--bs-body-bg) !important;
+}
+
+.himu-card:hover {
+    color: var(--bs-body-color);;
 }
 
 .himu-card-dark {
@@ -21,7 +29,7 @@
     margin: 0;
 }
 
-.himu-card-link {
+.himu-card-link-fluid {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -34,16 +42,16 @@
     transition: background-color .3s;
 }
 
-.himu-card-link:hover {
+.himu-card-link-fluid:hover {
     color: var(--bs-primary);
     background-color: rgba(245, 241, 241, 0.50);
 }
 
-.himu-card-dark .himu-card-link:hover {
+.himu-card-dark .himu-card-link-fluid:hover {
     background-color: rgba(58, 59, 61, 0.50);
 }
 
-.himu-card-link:after {
+.himu-card-link-fluid:after {
     float: right;
     content: url("../../images/right-link.png");
 }

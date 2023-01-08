@@ -81,7 +81,6 @@
     border: 1px solid rgba(0, 0, 0, 0.1);
     overflow: hidden;
     z-index: 10000;
-    transition-delay: 200ms;
     transition: width ease-in .2s;
 }
 
@@ -147,12 +146,42 @@
     background: transparent;
 }
 
-.home-container {
-    display: flex;
+.sub-page-tab {
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: start;
     background: transparent;
+}
+
+.sub-page-tab-backdrop {
+    z-index: -1;
+    position: fixed;
+    top:0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+    -webkit-backdrop-filter: blur(10px) saturate(1.5);
+    backdrop-filter: blur(10px) saturate(1.5);
+}
+
+.sub-page-tab-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.sub-page-tab-body {
+    width: 100%;
+    padding: 5px 10%;
+}
+
+@media screen and (max-width: 768px) {
+    .sub-page-tab-body {
+        padding: 0;
+    }
 }
 
 .daily-words {
@@ -177,22 +206,6 @@
 @media screen and (max-width: 768px){
     .daily-words {
         font-size: 12px;
-    }
-}
-
-.tip-words {
-    width: max-content;
-    text-align: center;
-    text-shadow: 0 0 30px rgb(0 0 0 / 40%);
-    font-weight: bold;
-    color: var(--bs-body-color);
-    position: relative;
-    top: 45vh;
-}
-
-@media screen and (max-width: 768px){
-    .tip-words {
-        display: none;
     }
 }
 

@@ -15,11 +15,11 @@ $dropdown-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 $dropdown-dark-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 $nav-link-font-size: 1.1rem;
 $navbar-dark-color: #ffffff;
-$navbar-dark-hover-color: $primary;
+
 $nav-link-color: #000000;
 $nav-link-padding-y: 1rem;
 $navbar-brand-font-size: 1.5rem;
-$navbar-light-hover-color: $primary;
+
 $spinner-animation-speed: .85s;
 
 $dropdown-link-hover-bg: #ffffff;
@@ -34,6 +34,32 @@ $modal-content-bg: #333333;
 $modal-backdrop-bg: #333333;
 $modal-header-border-color: #343A40;
 
+// 警告！自定义滚动条部分仅支持较新版本的Chrome内核浏览器.
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--bs-secondary);
+  opacity: 0.85;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+// 注意!! 较旧的浏览器不支持以下属性.
+body {
+  //noinspection CssInvalidPropertyValue
+  overflow-y: overlay;
+}
+
 .opacity-85 {
   opacity: 0.85 !important;
 }
@@ -42,14 +68,26 @@ $modal-header-border-color: #343A40;
   transition: background-color linear .3s;
 }
 
+.hvr-underline-from-center:before {
+  height: 2px !important;
+  background-color: $primary !important;
+}
+
 @media screen and (max-width: 768px){
   .collapse {
     display: none;
   }
 }
 
+
 :root {
   --himu-theme: "light";
+}
+
+.himu-heading {
+  display: inline-block;
+  border-left: 8px solid $primary;
+  padding-left: 8px;
 }
 
 @import "../node_modules/bootstrap/scss/variables";

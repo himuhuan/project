@@ -105,12 +105,4 @@
     padding: 20px;
 }
 
-.himu-modal-content::-webkit-scrollbar {
-    width: 10px;
-}
 
-.himu-modal-content::-webkit-scrollbar-thumb {
-    background-color: rgba(202, 199, 199, 0.85);
-    height: 10px;
-    border-radius: 5px;
-}

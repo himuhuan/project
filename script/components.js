@@ -33,7 +33,6 @@ $("#nav-menu-button").click(function (event) {
     event.stopPropagation();
 })
 
-/* sidebar */
 $("#nav-sidebar").mouseover(function () {
     if (!mScreenWidth.matches) {
         $("#nav-sidebar").css({
@@ -105,11 +104,13 @@ $("#search-bar").click(function (event) {
 /* Autoplay backgrounds  */
 let backgroundBoxes = document.getElementsByClassName("bgbox");
 let bgIndex = 0;
+let stopAutoPlay = false;
 
 function autoPlay() {
+    if (stopAutoPlay)
+        return;
     for (let i = 1; i < backgroundBoxes.length; i++) {
         if (!backgroundBoxes[i].complete) {
-            console.log(`image ${i} not load`);
             return;
         }
     }
@@ -119,7 +120,7 @@ function autoPlay() {
     backgroundBoxes[bgIndex].classList.add("bgbox-show");
 }
 
-setInterval(autoPlay, 15000);
+setInterval(autoPlay, 25000);
 
 function timer() {
     let min = String(new Date().getMinutes()).padStart(2, '0');
@@ -215,6 +216,21 @@ function setActiveModalTab(name) {
     $(linkName).addClass("himu-active-link");
     $('.himu-modal-tab').hide();
     $(name).fadeIn(500);
+}
+
+function setActiveSubPageTab(name) {
+    $('.sub-page-tab').fadeOut('slow').addClass('d-none');
+    if (name !== '#home-tab') {
+        stopAutoPlay = true;
+        if (!mScreenWidth.matches)
+            $('#main-nav').slideUp(300);
+        $('#cookie-banner').slideUp();
+    } else {
+        stopAutoPlay = false;
+        if (!mScreenWidth.matches)
+            $('#main-nav').slideDown();
+    }
+    $(name).fadeIn().removeClass('d-none').addClass('d-flex');
 }
 
 function preloadBackground() {

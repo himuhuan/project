@@ -3,12 +3,40 @@
   font-family: "Fira-Code";
   src: url("../resource/FiraCode.ttf");
 }
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--bs-secondary);
+  opacity: 0.85;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+body {
+  overflow-y: overlay;
+}
+
 .opacity-85 {
   opacity: 0.85 !important;
 }
 
 .bg-transition {
   transition: background-color linear 0.3s;
+}
+
+.hvr-underline-from-center:before {
+  height: 2px !important;
+  background-color: #ff5568 !important;
 }
 
 @media screen and (max-width: 768px) {
@@ -18,6 +46,12 @@
 }
 :root {
   --himu-theme: "light";
+}
+
+.himu-heading {
+  display: inline-block;
+  border-left: 8px solid #ff5568;
+  padding-left: 8px;
 }
 
 :root {
@@ -2639,7 +2673,7 @@ progress {
   --bs-navbar-padding-x: 0;
   --bs-navbar-padding-y: 0.5rem;
   --bs-navbar-color: #000000;
-  --bs-navbar-hover-color: #ff5568;
+  --bs-navbar-hover-color: rgba(0, 0, 0, 0.7);
   --bs-navbar-disabled-color: rgba(0, 0, 0, 0.3);
   --bs-navbar-active-color: rgba(0, 0, 0, 0.9);
   --bs-navbar-brand-padding-y: 0.625rem;
@@ -3050,7 +3084,7 @@ progress {
 
 .navbar-dark {
   --bs-navbar-color: #ffffff;
-  --bs-navbar-hover-color: #ff5568;
+  --bs-navbar-hover-color: rgba(255, 255, 255, 0.75);
   --bs-navbar-disabled-color: rgba(255, 255, 255, 0.25);
   --bs-navbar-active-color: #fff;
   --bs-navbar-brand-color: #fff;
