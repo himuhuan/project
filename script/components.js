@@ -107,7 +107,7 @@ let bgIndex = 0;
 let stopAutoPlay = false;
 
 function autoPlay() {
-    if (stopAutoPlay)
+    if (stopAutoPlay || backgroundBoxes === undefined)
         return;
     for (let i = 1; i < backgroundBoxes.length; i++) {
         if (!backgroundBoxes[i].complete) {
@@ -120,7 +120,7 @@ function autoPlay() {
     backgroundBoxes[bgIndex].classList.add("bgbox-show");
 }
 
-setInterval(autoPlay, 25000);
+setInterval(autoPlay, 15000);
 
 function timer() {
     let min = String(new Date().getMinutes()).padStart(2, '0');
@@ -259,4 +259,9 @@ function preloadBackground() {
         "../images/backgrounds/Dark/background4.jpg",
         "../images/backgrounds/Login/LoginBackground.jpg"
     );
+}
+
+function jumpToExternSite(siteName) {
+    $.cookie("extern_site", siteName, {path: '/'});
+    window.location.href = 'pages/jump.html';
 }

@@ -8,5 +8,5 @@ $(document).ready(function () {
     updateTimer();
     setTheme();
     setActiveSubPageTab('#home-tab');
-    setTimeout(function () { $('#start-tip').slideDown('slow'); }, 3000);
+    setTimeout(function () { $('#start-tip').slideDown('slow'); }, 1500);
 });

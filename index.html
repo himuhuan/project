@@ -3,6 +3,12 @@
 ---->
 
 <!---- Created & Coded by Himu. ----->
+
+<!---
+  -- 说明：
+  -- 以下部分代码嵌套较深，这是由于主页实际上结合了几个网页的内容，我们认为避免跳转可以增加用户体验
+--->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,11 +39,28 @@
                     <a class="nav-link dropdown-toggle hvr-wobble-vertical" role="button" id="nav-index" href="#">
                         索引 </a>
                     <ul class="dropdown-menu shadow-sm" id="dropdown-list">
-                        <li><a class="dropdown-item hvr-grow" href="#"> 动画 </a></li>
-                        <li><a class="dropdown-item hvr-grow" href="#"> 漫画 </a></li>
-                        <li><a class="dropdown-item hvr-grow" href="#"> 本子 </a></li>
-                        <li><a class="dropdown-item hvr-grow" href="#"> 游戏 </a></li>
-                        <li><a class="dropdown-item hvr-grow" href="#"> 工具 </a></li>
+                        <li>
+                            <a class="dropdown-item hvr-grow"
+                               href="javascript:void(0)" onclick="setActiveSubPageTab('#anime-tab')">
+                                动画
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item hvr-grow"
+                               href="javascript:void(0)" onclick="setActiveSubPageTab('#comic-tab')">
+                                漫画 </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item hvr-grow"
+                               href="javascript:void(0)" onclick="setActiveSubPageTab('#doujinshi-tab')">
+                                本子
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item hvr-grow" href="javascript:void(0)" onclick="setActiveSubPageTab('#game-tab')">
+                                游戏
+                            </a>
+                        </li>
                     </ul>
                 </li>
                 <li class="nav-item mx-lg-4">
@@ -85,33 +108,26 @@
              width="32">
         动画
     </a>
-    <a href="#" class="sidebar-link hvr-grow">
+    <a href="javascript:void(0)" onclick="setActiveSubPageTab('#comic-tab')" class="sidebar-link hvr-grow">
         <img src="images/SidebarComicLogo.png"
              class="mx-auto"
              alt=""
              width="32">
         漫画
     </a>
-    <a href="#" class="sidebar-link hvr-grow">
+    <a href="javascript:void(0)" onclick="setActiveSubPageTab('#game-tab')" class="sidebar-link hvr-grow">
         <img src="images/SidebarGameLogo.png"
              class="mx-auto"
              alt=""
              width="32">
         游戏
     </a>
-    <a href="#" class="sidebar-link hvr-grow">
+    <a href="javascript:void(0)" onclick="setActiveSubPageTab('#doujinshi-tab')" class="sidebar-link hvr-grow">
         <img src="images/SidebarMangaLogo.png"
              class="mx-auto"
              alt=""
              width="32">
         同人志
-    </a>
-    <a href="#" class="sidebar-link hvr-grow">
-        <img src="images/SidebarToolsLogo.png"
-             class="mx-auto"
-             alt=""
-             width="32">
-        工具
     </a>
     <a href="javascript:void(0)" onclick="changeTheme()" class="sidebar-link hvr-grow" id="sidebar-theme-switch">
         <img src="images/SidebarSettingsLogo.png"
@@ -134,10 +150,10 @@
             <label for="search-bar"></label>
             <input type="text" placeholder="输入内容后回车以进行搜索。" id="search-bar" name="home-search" size="">
         </div>
-        <div class="daily-words mt-5">  </div>
+        <div class="daily-words mt-5"></div>
     </div>
     <div class="sub-page-tab" id="anime-tab">
-        <div class="sub-page-tab-backdrop">  </div>
+        <div class="sub-page-tab-backdrop"></div>
         <div class="sub-page-tab-container bg-transition">
             <div class="sub-page-tab-body">
                 <div class="himu-card my-3 w-100">
@@ -158,7 +174,8 @@
                         <h4> 国内 </h4>
                         <div class="row">
                             <div class="col-xxl-4 my-3 my-xxl-4">
-                                <a class="himu-card h-100 w-100 hvr-shadow" href="#">
+                                <a class="himu-card h-100 w-100 hvr-shadow"
+                                   href="javascript:void(0);" onclick="jumpToExternSite('https://www.agemys.net')">
                                     <div class="d-flex">
                                         <img class="rounded-circle" src="https://www.agemys.net/favicon.ico"
                                              width="32" height="32" alt=""/>
@@ -170,11 +187,12 @@
                                 </a>
                             </div>
                             <div class="col-xxl-4 my-3 my-xxl-4">
-                                <a class="himu-card h-100 w-100 hvr-shadow" href="#">
+                                <a class="himu-card h-100 w-100 hvr-shadow"
+                                   href="javascript:void(0);" onclick="jumpToExternSite('https://www.gqdm.net')">
                                     <div class="d-flex">
                                         <img class="rounded-circle"
-                                             src="https://www.gqdm.net/template/conch/asset/img/favicon.png" width="32"
-                                             height="32" alt=""/>
+                                             src="https://www.gqdm.net/template/conch/asset/img/favicon.png"
+                                             width="32" height="32" alt=""/>
                                         <div class="mx-xxl-4 mx-2">
                                             <h5 class="fw-bold"> 异世界动漫 </h5>
                                             <p class="small m-0 p-0"> 免费、可在线观看、下载，但是有时无法访问。 </p>
@@ -183,11 +201,12 @@
                                 </a>
                             </div>
                             <div class="col-xxl-4 my-3 my-xxl-4">
-                                <a class="himu-card h-100 w-100 hvr-shadow" href="#">
+                                <a class="himu-card h-100 w-100 hvr-shadow"
+                                   href="javascript:void(0);" onclick="jumpToExternSite('https://www.bilibili.com')">
                                     <div class="d-flex">
                                         <img class="rounded-circle"
-                                             src="https://www.bilibili.com/favicon.ico?v=1" width="32"
-                                             height="32" alt=""/>
+                                             src="https://www.bilibili.com/favicon.ico?v=1"
+                                             width="32" height="32" alt=""/>
                                         <div class="mx-xxl-4 mx-2">
                                             <h5 class="fw-bold"> Bilibili </h5>
                                             <p class="small m-0 p-0">哔哩哔哩 (゜-゜)つロ 干杯~-bilibili</p>
@@ -198,10 +217,11 @@
                         </div>
                         <div class="row">
                             <div class="col-xxl-4 my-3 my-xxl-4">
-                                <a class="himu-card h-100 w-100 hvr-shadow" href="#">
+                                <a class="himu-card h-100 w-100 hvr-shadow"
+                                   href="javascript:void(0);" onclick="jumpToExternSite('https://www.acfun.cn')">
                                     <div class="d-flex">
                                         <img class="rounded-circle"
-                                             src="http://cdn.aixifan.com/ico/favicon.ico"
+                                             src="https://cdn.aixifan.com/ico/favicon.ico"
                                              width="32" height="32" alt=""/>
                                         <div class="mx-xxl-4 mx-2">
                                             <h5 class="fw-bold"> AcFun </h5>
@@ -218,11 +238,316 @@
             </div>
         </div>
     </div>
+    <div class="sub-page-tab" id="comic-tab">
+        <div class="sub-page-tab-backdrop"></div>
+        <div class="sub-page-tab-container">
+            <div class="sub-page-tab-body">
+                <div class="himu-card my-3 w-100">
+                    <div class="himu-card-body">
+                        <h2 class="himu-heading fw-bold"> 漫画 (Comic) </h2>
+                        <img class="float-end m-2 shadow-sm"
+                             src="./images/Comic.jpg" width="134" height="178" alt/>
+                        <p> 日本漫画，指日本国内制作或发行的漫画，包括故事连环画和四幅一组的组画，
+                            它是画面组合作品的总称，也是指刊载这类作品的杂志和单行本。
+                            高度发展的日本漫画已经成为世界漫画当中具有独特风格以及庞大影响力的流派。
+                            多数日本漫画有一些共同的特征，而具有这类特征的漫画常被称为日式漫画，
+                            而全球最有名的漫画大多数在日本。 </p>
+                    </div>
+                </div>
+                <div class="himu-card w-100">
+                    <div class="himu-card-body">
+                        <h4> 国内 </h4>
+                        <div class="row">
+
+                            <div class="col-xxl-4 my-3 my-xxl-4">
+                                <a class="himu-card h-100 w-100 hvr-shadow"
+                                   href="javascript:void(0);" onclick="jumpToExternSite('https://ac.qq.com/')">
+                                    <div class="d-flex">
+                                        <img class="rounded-circle" src="https://ac.qq.com/favicon.ico"
+                                             width="32" height="32" alt=""/>
+                                        <div class="mx-xxl-4 mx-2">
+                                            <h5 class="fw-bold"> 腾讯漫画 </h5>
+                                            <p class="small m-0 p-0"> 中国最大最权威的正版动漫网站。 </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!--- 下面添加其它元素 --->
+                            <div class="col-xxl-4 my-3 my-xxl-4">
+                                <a class="himu-card h-100 w-100 hvr-shadow"
+                                   href="javascript:void(0);" onclick="jumpToExternSite('https://www.dm5.com')">
+                                    <div class="d-flex">
+                                        <img class="rounded-circle" src="https://www.dm5.com/favicon.ico"
+                                             width="32" height="32" alt=""/>
+                                        <div class="mx-xxl-4 mx-2">
+                                            <h5 class="fw-bold"> 动漫屋 </h5>
+                                            <p class="small m-0 p-0">
+                                                原创国漫,日本漫画,港台漫画,韩国漫画,欧美漫画,好漫画,为看漫画的人而生。 </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xxl-4 my-3 my-xxl-4">
+                                <a class="himu-card h-100 w-100 hvr-shadow"
+                                   href="javascript:void(0);"
+                                   onclick="jumpToExternSite('https://www.kuaikanmanhua.com')">
+                                    <div class="d-flex">
+                                        <img class="rounded-circle" src="https://www.kuaikanmanhua.com/favicon.ico"
+                                             width="32" height="32" alt=""/>
+                                        <div class="mx-xxl-4 mx-2">
+                                            <h5 class="fw-bold"> 快看漫画</h5>
+                                            <p class="small m-0 p-0">
+                                                快看漫画是引领行业的新生代漫画阅读平台和兴趣社区。 </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xxl-4 my-3 my-xxl-4">
+                                <a class="himu-card h-100 w-100 hvr-shadow"
+                                   href="javascript:void(0);" onclick="jumpToExternSite('https://www.manmanapp.com')">
+                                    <div class="d-flex">
+                                        <img class="rounded-circle" src="https://www.manmanapp.com/favicon.ico"
+                                             width="32" height="32" alt=""/>
+                                        <div class="mx-xxl-4 mx-2">
+                                            <h5 class="fw-bold"> 漫漫漫画 </h5>
+                                            <p class="small m-0 p-0">
+                                                漫漫漫画秉承正版原创，立志将二次元宅腐暖萌一网打尽，成为国内正版漫画集结地。 </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xxl-4 my-3 my-xxl-4">
+                                <a class="himu-card h-100 w-100 hvr-shadow"
+                                   href="javascript:void(0);" onclick="jumpToExternSite('https://manga.bilibili.com')">
+                                    <div class="d-flex">
+                                        <img class="rounded-circle"
+                                             src="https://www.bilibili.com/favicon.ico?v=1"
+                                             width="32" height="32" alt=""/>
+                                        <div class="mx-xxl-4 mx-2">
+                                            <h5 class="fw-bold"> 哔哩哔哩漫画 </h5>
+                                            <p class="small m-0 p-0"> 哔哩哔哩正版漫画阅读平台, 海量官方漫画连载在线观看,
+                                                二次元动漫迷的追漫神器, 。 </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sub-page-tab" id="game-tab">
+        <div class="sub-page-tab-backdrop"></div>
+        <div class="sub-page-tab-container">
+            <div class="sub-page-tab-body">
+                <div class="himu-card my-3 w-100">
+                    <div class="himu-card-body">
+                        <h2 class="himu-heading fw-bold"> 游戏 (Game) </h2>
+                        <img class="float-end m-2 shadow-sm"
+                             src="./images/GameCSGO.jpg" width="134" height="178" alt/>
+                        <p> 电子游戏（electronic Games）又称电玩游戏，是指所有依托于电子设备平台而运行的交互游戏，
+                            狭义的时候称视频游戏。根据运行媒介的不同分为五类：主机游戏（狭义的，此处专指家用机游戏，
+                            又称视频游戏控制台）、掌机游戏、街机游戏、电脑游戏及手机游戏。
+                            在国外有时包括用于赌博的老虎机和柏青哥以及弹珠台。
+                            完善的电子游戏在20世纪末出现，改变了人类进行游戏的行为方式和对游戏一词的定义,
+                            属于一种随科技发展而诞生的文化活动. </p>
+                    </div>
+                </div>
+                <div class="himu-card w-100">
+                    <div class="row">
+                        <div class="col-xxl-4 my-3 my-xxl-4">
+                            <a class="himu-card h-100 w-100 hvr-shadow"
+                               href="javascript:void(0);" onclick="jumpToExternSite('https://store.steampowered.com/')">
+                                <div class="d-flex">
+                                    <img class="rounded-circle" src="https://store.steamchina.com/favicon.ico"
+                                         width="32" height="32" alt=""/>
+                                    <div class="mx-xxl-4 mx-2">
+                                        <h5 class="fw-bold"> STEAM </h5>
+                                        <p class="small m-0 p-0"> Steam是全球最大的PC数字游戏发行平台。 </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xxl-4 my-3 my-xxl-4">
+                            <a class="himu-card h-100 w-100 hvr-shadow"
+                               href="javascript:void(0);" onclick="jumpToExternSite('https://cg.163.com')">
+                                <div class="d-flex">
+                                    <img class="rounded-circle" src="https://cg.163.com/favicon.ico"
+                                         width="32" height="32" alt=""/>
+                                    <div class="mx-xxl-4 mx-2">
+                                        <h5 class="fw-bold"> 网易云游戏 </h5>
+                                        <p class="small m-0 p-0">
+                                            网易游戏推出的云游戏服务平台，通过平台的云游戏技术和服务器资源让玩家畅玩游戏。 </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xxl-4 my-3 my-xxl-4">
+                            <a class="himu-card h-100 w-100 hvr-shadow"
+                               href="javascript:void(0);" onclick="jumpToExternSite('https://www.wegame.com.cn')">
+                                <div class="d-flex">
+                                    <img class="rounded-circle" src="https://www.wegame.com.cn/favicon.ico"
+                                         width="32" height="32" alt=""/>
+                                    <div class="mx-xxl-4 mx-2">
+                                        <h5 class="fw-bold"> WeGame平台</h5>
+                                        <p class="small m-0 p-0">
+                                            囊括了腾讯全平台的游戏，并立志成为中国人自己的“Steam”游戏平台 </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xxl-4 my-3 my-xxl-4">
+                            <a class="himu-card h-100 w-100 hvr-shadow"
+                               href="javascript:void(0);" onclick="jumpToExternSite('https://www.4399.com')">
+                                <div class="d-flex">
+                                    <img class="rounded-circle" src="https://www.4399.com/favicon.ico"
+                                         width="32" height="32" alt=""/>
+                                    <div class="mx-xxl-4 mx-2">
+                                        <h5 class="fw-bold"> 4399游戏 </h5>
+                                        <p class="small m-0 p-0">
+                                            4399是中国领先的小游戏专业网站,免费为你提供小游戏大全。 </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xxl-4 my-3 my-xxl-4">
+                            <a class="himu-card h-100 w-100 hvr-shadow"
+                               href="javascript:void(0);" onclick="jumpToExternSite('https://www.7k7k.com')">
+                                <div class="d-flex">
+                                    <img class="rounded-circle" src="http://www.7k7k.com/favicon.ico"
+                                         width="32" height="32" alt=""/>
+                                    <div class="mx-xxl-4 mx-2">
+                                        <h5 class="fw-bold"> 7k7k小游戏 </h5>
+                                        <p class="small m-0 p-0"> 7k7k是中国最大的小游戏专业网站,免费为你提供各种绿色、安全、健康的小游戏
+                                            。 </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xxl-4 my-3 my-xxl-4">
+                            <a class="himu-card h-100 w-100 hvr-shadow"
+                               href="javascript:void(0);" onclick="jumpToExternSite('https://www.nintendo.com/')">
+                                <div class="d-flex">
+                                    <img class="rounded-circle" src="https://www.nintendo.com.hk/favicon.ico"
+                                         width="32" height="32" alt=""/>
+                                    <div class="mx-xxl-4 mx-2">
+                                        <h5 class="fw-bold"> 任天堂 </h5>
+                                        <p class="small m-0 p-0">
+                                            任天堂是最有影响和有名的游戏平台生产商之一，是便携式游戏机平台的领导者。 </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sub-page-tab" id="doujinshi-tab">
+        <div class="sub-page-tab-backdrop"></div>
+        <div class="sub-page-tab-container">
+            <div class="sub-page-tab-body">
+                <div class="himu-card my-3 w-100">
+                    <div class="himu-card-body">
+                        <h2 class="himu-heading fw-bold"> 同人志 (Doujinshi) </h2>
+                        <img class="float-end m-2 shadow-sm"
+                             src="./images/doujinshi.jpg" width="134" height="178" alt/>
+                        <p> “同人志”（どうじんし），是指一群同好走在一起，所共同创作出版的书籍、刊物，
+                            虽然所谓的同人志原本并没有特别限定创作的目标事物，但对一般人来说，
+                            比较常听到此名词的用途，是在意指漫画或与漫画相关的周边创作方面。 </p>
+                    </div>
+                </div>
+                <div class="himu-card w-100">
+                    <div class="himu-card-body">
+                        <div class="row">
+                            <div class="col-xxl-4 my-3 my-xxl-4">
+                                <a class="himu-card h-100 w-100 hvr-shadow"
+                                   href="javascript:void(0);" onclick="jumpToExternSite('https://pixiv.moe/')">
+                                    <div class="d-flex">
+                                        <img class="rounded-circle"
+                                             src="https://pixiv.moe/assets/6bb2fb27dfa0c1498d446349eceea304.png"
+                                             width="32" height="32" alt=""/>
+                                        <div class="mx-xxl-4 mx-2">
+                                            <h5 class="fw-bold"> PIXIV</h5>
+                                            <p class="small m-0 p-0"> pixiv是一个集插画·漫画·小说投稿及阅览于一体的“绘图交流平台”。 </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xxl-4 my-3 my-xxl-4">
+                                <a class="himu-card h-100 w-100 hvr-shadow"
+                                   href="javascript:void(0);" onclick="jumpToExternSite('https://www.lightnovel.us/?ref=acgdh.cc')">
+                                    <div class="d-flex">
+                                        <img class="rounded-circle" src="https://www.lightnovel.us/_nuxt/img/57c2c3d.svg"
+                                             width="32" height="32" alt=""/>
+                                        <div class="mx-xxl-4 mx-2">
+                                            <h5 class="fw-bold"> 轻之国度 </h5>
+                                            <p class="small m-0 p-0">
+                                                輕之國度是專註于分享的NACG社群，这里有用户分享的最新的NACG资源，有很好的社群与创作氛围。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xxl-4 my-3 my-xxl-4">
+                                <a class="himu-card h-100 w-100 hvr-shadow"
+                                   href="javascript:void(0);" onclick="jumpToExternSite('https://www.mihuashi.com/artworks?ref=acgdh.cc')">
+                                    <div class="d-flex">
+                                        <img class="rounded-circle" src="https://image-assets.mihuashi.com/misc/header-bar-logo.png"
+                                             width="32" height="32" alt=""/>
+                                        <div class="mx-xxl-4 mx-2">
+                                            <h5 class="fw-bold"> 米画师</h5>
+                                            <p class="small m-0 p-0"> 米画师是为企划方与自由画师量身打造的专业美术外包服务平台。 </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xxl-4 my-3 my-xxl-4">
+                                <a class="himu-card h-100 w-100 hvr-shadow"
+                                   href="javascript:void(0);" onclick="jumpToExternSite('https://www.acgnu.com/?ref=acgdh.cc')">
+                                    <div class="d-flex">
+                                        <img class="rounded-circle" src="https://www.acgnu.com/wp-content/uploads/2022/07/logo-3.png"
+                                             width="32" height="32" alt=""/>
+                                        <div class="mx-xxl-4 mx-2">
+                                            <h5 class="fw-bold"> LSP壁纸</h5>
+                                            <p class="small m-0 p-0"> LSP壁纸，专注分享二次元、动漫、游戏、人物、主题等画师原画插画壁纸图集。 </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-xxl-4 my-3 my-xxl-4">
+                                <a class="himu-card h-100 w-100 hvr-shadow"
+                                   href="javascript:void(0);" onclick="jumpToExternSite('https://www.biacgn.com/?ref=acgdh.cc')">
+                                    <div class="d-flex">
+                                        <img class="rounded-circle" src="https://cos.biacgn.com/img_biacgn_com/uploads/2022/11/2022110416434975.png"
+                                             width="32" height="32" alt=""/>
+                                        <div class="mx-xxl-4 mx-2">
+                                            <h5 class="fw-bold"> 萌图百科动漫网 </h5>
+                                            <p class="small m-0 p-0"> 萌图百科动漫网 – 动漫图片图包分享与交流 官方网站。 </p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="tip-pop" id="start-tip">
         <div class="tip-pop-body bg-transition">
             <h5 class="mb-1 fw-bold"> 提示 </h5>
             <p>您可以将鼠标移至左侧打开侧边栏进行下一步操作，在侧边栏点击头像即可返回本页。
-            关于本Web作业的说明参见<b> “关于 -> 实验报告” </b></p>
+                关于本Web作业的说明参见<b> “关于 -> 实验报告” </b></p>
             <button class="btn btn-outline-primary float-end mt-2 w-50 btn-sm"
                     onclick="$('#start-tip').slideToggle();">
                 好的
@@ -304,7 +629,8 @@
             </div>
             <div class="himu-modal-tab" id="modal-feedback-tab">
                 <h3 class="my-3"> Feedback </h3>
-                <p> 您可以访问以下页面填写本网站的用户反馈，也可以将您的宝贵意见发送至邮箱 <u>mmpliuhuan@outlook.com</u> </p>
+                <p> 您可以访问以下页面填写本网站的用户反馈，也可以将您的宝贵意见发送至邮箱 <u>mmpliuhuan@outlook.com</u>
+                </p>
                 <div class="himu-card w-100">
                     <div class="himu-card-body">
                         <a class="himu-card-link-fluid" href="#"> 进入反馈页面 </a>
