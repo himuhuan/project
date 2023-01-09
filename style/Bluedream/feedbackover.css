@@ -1,0 +1,44 @@
+/** <!--- Created by Bluedream ---> */
+
+.title-text
+{
+    font-size: 36px;
+    color: white;
+   
+}
+.title
+{
+background-color: #ff5568;
+width: 56%;
+margin-top: 50px;
+box-shadow: 2px 2px 2px  #656B79; 
+}
+body
+{
+    background-color:#E6EDF2;
+}
+.body
+{
+    background-color: #FFFFFF;
+	width: 52%;
+	height: auto;
+	padding: 30px;
+    margin: auto; 
+    box-shadow: 2px 2px 2px  #656B79; 
+}
+.top-text
+{   
+         width: 650px;
+  margin-left: 85px;
+  padding-top: 10px;
+ padding-bottom: 10px;
+    color: #ff5568;
+    font-size: 26px;
+     text-align: left;
+     background-color: #E6EDF2;
+}
+footer{
+    margin-top: 70px;
+    background-color:#f6f7f7;
+    font-size: 10px;
+}
