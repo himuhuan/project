@@ -1,0 +1,89 @@
+/** <!--- Created by Bluedream ---> */
+
+.title-text
+{
+    font-size: 36px;
+    color: white;
+   
+}
+.title
+{
+background-color: #ff5568;
+width: 59%;
+margin-top: 50px;
+box-shadow: 2px 2px 2px  #656B79; 
+}
+body
+{
+    background-color:#E6EDF2;
+}
+.body
+{
+    background-color: #FFFFFF;
+	width: 52%;
+	height: auto;
+	padding: 30px;
+    margin: auto; 
+    box-shadow: 2px 2px 2px  #656B79; 
+}
+.top-text
+{   
+         width: auto;
+  margin-left: 45px;
+  padding-top: 10px;
+ padding-bottom: 10px;
+    color: #ff5568;
+    font-size: 26px;
+     text-align: left;
+     background-color: #E6EDF2;
+}
+.text-title
+{  width:auto;
+    margin-left: 38px;
+    height: 25px;
+    color:black;
+    font-size: 15px;
+    background-color: #E6EDF2;
+   float:left;
+}
+.num
+{
+margin-left: 50px;
+background-color:#ff5568;
+width: 30px;
+text-align: center;
+}
+.block
+{  width: auto;
+    height: 90px;
+   margin-top: 20px;
+   background-color: #E6EDF2;
+   margin-left: 45px;
+}
+.input
+{  margin-left: 45px;
+    min-width :90%;
+    height: 35px;
+    margin-bottom: 20px;
+    padding-right: 24px;
+}
+button
+{
+    margin-left: 45px;
+    width: 170px;
+    height: 39px;
+    font-size: 20px;
+    background-color:#0078D4 ;
+    border-style: none;
+    color: white;
+}
+button:hover
+{
+    background-color:#ff5568;
+}
+footer{
+    margin-top: 70px;
+    background-color:#f6f7f7;
+    font-size: 10px;
+   margin-left: 15px;
+}
