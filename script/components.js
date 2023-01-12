@@ -107,13 +107,16 @@ let bgIndex = 0;
 let stopAutoPlay = false;
 
 function autoPlay() {
-    if (stopAutoPlay || backgroundBoxes === undefined)
+    if (stopAutoPlay)
         return;
     for (let i = 1; i < backgroundBoxes.length; i++) {
         if (!backgroundBoxes[i].complete) {
             return;
         }
     }
+
+    if (backgroundBoxes[bgIndex] === undefined)
+        return;
     backgroundBoxes[bgIndex].classList.remove("bgbox-show");
     bgIndex++;
     bgIndex = bgIndex % backgroundBoxes.length;
@@ -257,7 +260,16 @@ function preloadBackground() {
         "../images/backgrounds/Dark/background2.jpg",
         "../images/backgrounds/Dark/background3.jpg",
         "../images/backgrounds/Dark/background4.jpg",
-        "../images/backgrounds/Login/LoginBackground.jpg"
+        "../images/backgrounds/Login/LoginBackground.jpg",
+        "../pages/ReportRes/GIF0.gif",
+        "../pages/ReportRes/GIF1.gif",
+        "../pages/ReportRes/GIF2.gif",
+        "../pages/ReportRes/GIF3.gif",
+        "../pages/ReportRes/GIF4.gif",
+        "../pages/ReportRes/GIF5.gif",
+        "../pages/ReportRes/Report1.jpg",
+        "../pages/ReportRes/Report2.jpg",
+        "../pages/ReportRes/Report3.jpg"
     );
 }
 

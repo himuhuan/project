@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link type="text/css" rel="stylesheet" href="../style/bootstrap-magimu-theme.css"/>
+    <link type="text/css" rel="stylesheet" href="../style/hover-min.css"/>
+    <link type="text/css" rel="stylesheet" href="../style/components/home.css"/>
+    <link type="text/css" rel="stylesheet" href="../style/components/card.css"/>
+    <link type="text/css" rel="stylesheet" href="../style/components/report.css"/>
+    <link type="text/css" rel="stylesheet" href="../style/components/cookie-banner.css"/>
+    <link type="text/css" rel="stylesheet" href="../style/prism.css"/>
+    <title> 作业报告 </title>
+</head>
+<body class="bg-transition">
+
+<header>
+    <nav class="navbar opacity-85 navbar-light bg-white shadow-sm navbar-expand-sm px-4 py-0" id="main-nav">
+        <a class="navbar-brand font-monospace text-center" href="../index.html">
+            Magimu
+        </a>
+        <div class="collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item mx-lg-4">
+                    <a class="nav-link hvr-underline-from-center" href="../pages/login.html"> <u>登录/注册</u> </a>
+                </li>
+                <li class="nav-item mx-lg-4">
+                    <a class="nav-link hvr-underline-from-center"
+                       href="javascript:void(0)" onclick="changeTheme()"> 切换主题 </a>
+                </li>
+            </ul>
+        </div>
+        <button class="mobile-menu-button" id="nav-menu-button">
+            <img src="../images/menu.png" height="32" width="32" alt>
+        </button>
+    </nav>
+</header>
+
+<main class="container-fluid">
+    <div class="row">
+        <div class="col-2 collapse bg-transition" id="doc-sidebar">
+            <ul id="sidebar-list" class="py-2">
+                <li> <h5 class="fw-bolder"> 文章索引 </h5> </li>
+                <li> <h5 class="text-primary"> 网站的基本介绍 </h5> </li>
+                <li> <a class="hvr-grow" href="#site-overview"> 网站概览 </a> </li>
+                <li> <a class="hvr-grow" href="#site-effect"> 网站细节 </a> </li>
+                <li> <a class="hvr-grow" href="#site-effect"> 特效说明 </a> </li>
+                <li> <h5 class="text-primary"> 技术文档 </h5> </li>
+                <li> <a class="hvr-grow" href="#tech-intro"> 概述 </a> </li>
+                <li> <a class="hvr-grow" href="#tech-js"> Javascript </a> </li>
+                <li> <a class="hvr-grow" href="#tech-js"> jQuery </a> </li>
+                <li> <a class="hvr-grow" href=#tech-bs> Bootstrap </a> </li>
+                <li> <a class="hvr-grow" href="#tech-cookie"> Cookie </a> </li>
+                <li> <a class="hvr-grow" href="#tech-cdn"> CDN 与域名 </a> </li>
+            </ul>
+        </div>
+        <div class="col-sm-7 col-12 py-lg-2 px-lg-3" id="doc-content">
+            <img src="../favicon.ico" alt=""/>
+            <h1 class="font-monospace" id="doc-title"> Magimu Nav. 作业报告 </h1>
+            <h2 class="himu-heading fw-bold my-3">网站的基本介绍</h2>
+            <h5 class="fw-bold" id="site-overview"> 网站概览 </h5>
+            <div class="img-container">
+                <img src="./ReportRes/Report1.jpg" width="730" height="390" alt=""/>
+                Magimu 浅色模式
+            </div>
+            <div class="img-container">
+                <img src="./ReportRes/Report2.jpg" width="730" height="390" alt=""/>
+                Magimu 深色模式
+            </div>
+            <div class="img-container">
+                <img src="./ReportRes/Report3.jpg" width="410" height="608" alt=""/>
+                Magimu 移动端
+            </div>
+            <h5 class="fw-bold" id="site-effect"> 网站细节 & 特效说明 </h5>
+            <ol>
+                <li>
+                    <b>背景图动态轮播，切换图片时淡入淡出。</b>不同主题背景图不同。
+                    <div class="tip">
+                        <b>注意</b>：背景图的切换时间为15s, 各个主题的背景图各有4张，
+                        虽然我们采用了预加载技术与CDN加速（参见技术文档），但是在网络较差时，
+                        该功能的体验并不好，建议加载出网页logo后进行操作。
+                    </div>
+                    <div class="img-container">
+                        <img src="./ReportRes/GIF0.gif" width="730" height="390" alt=""/>
+                        背景图动态轮播
+                    </div>
+                </li>
+                <li>网站中心的实时时间可以随时让您观察时间（参见下图)</li>
+                <li><b>顶部导航栏有多种动态特效</b>，字体颜色浅化，由中间向两边移动的指示，
+                    索引更是有上下跳动效果。二级导航也带有颜色变化和字体放大等效果。（参见下图)</li>
+                <li>
+                    本网站采用<b>深色与浅色双主题形式</b>，浏览者可以根据自己的喜好自行切换相应主题，
+                    切换时有过渡效果。并且<b>网站会记住用户机的主题设置。</b>
+                    <div class="img-container">
+                        <img src="./ReportRes/GIF1.gif" width="730" height="390" alt=""/>
+                        主题、时间与导航栏
+                    </div>
+                </li>
+                <li>
+                    <b>侧导航栏</b>给你更快捷更方便的操作体验，侧边栏一般情况下为隐藏状态，用户只需要移到页面左侧即可自动展开.
+                    <div class="tip">
+                        <b>注意</b>：侧边栏仅在主页可用。
+                    </div>
+                    <div class="img-container">
+                        <img src="./ReportRes/GIF4.gif" width="410" height="608" alt=""/>
+                        侧边栏
+                    </div>
+                </li>
+                <li>
+                    <b>搜索框采用毛玻璃效果，点击后对背景图进行放缩与模糊处理</b>，底部随机淡入淡出出现一段富有意义的话。
+                    <div class="img-container">
+                        <img src="./ReportRes/GIF2.gif" width="730" height="390" alt=""/>
+                        搜索框
+                    </div>
+                </li>
+                <li>
+                    移动端的适配非常自然完美，<b>在移动端所有组件与页面都做了适配</b>，侧边栏也自然的变为了导航栏展开的菜单。
+                    <div class="img-container">
+                        <img src="./ReportRes/GIF3.gif" width="410" height="608" alt=""/>
+                        Magimu 移动端
+                    </div>
+                </li>
+                <li>
+                    <b>“关于”框采用 Modal 效果，并在其中嵌入了数个子页面</b>，子页面切换淡入淡出自然，
+                    对应的tab也会随之变化，Modal的backdrop也用到了毛玻璃特效.
+                    <div class="tip">
+                        <b>注意</b>：“关于”只在PC端可见，关于 Modal特效的说明参见下页技术文档。
+                    </div>
+                    <div class="img-container">
+                        <img src="./ReportRes/GIF5.gif" width="730" height="390" alt=""/>
+                        Magimu 深色模式
+                    </div>
+                </li>
+                <li> 我们对滚动条样式进行了修改，具体效果就在本网页体现。</li>
+                <li> <b>主页采用标签页式设计</b>， 主页实际上包括了数个子页面。
+                    具体效果与Modal切换标签基本一致，详情参见网站主页。</li>
+            </ol>
+            <h2 class="himu-heading fw-bold my-3">技术文档</h2>
+            <h5 class="fw-bold" id="tech-intro"> 概述 </h5>
+            <p> 为方便开发，本网站采用了多种第三方库/框架，包括:  </p>
+            <ul>
+                <li> Bootstrap 5 </li>
+                <li> Cover.css </li>
+                <li> jQuery </li>
+                <li> jQuery.Cookie </li>
+                <li> prism.js </li>
+            </ul>
+            <h5 class="fw-bold" id="tech-js"> Js 与 jQuery 的应用 </h5>
+            <p>
+                我们把所有有关组件的javascript 函数与全局变量代码置于components.js 内方便其它页面调取，<b>在每张页面加载时，
+                我们都会调用 setTheme 以确保每一张页面的主题一致。</b>
+            </p>
+            <p> jQuery的应用主要体现在对DOM的控制中，例如搜索框。
+                注意：我们为了确保点击除搜索框之外可以退出搜索状态，<b>也对DOM的事件进行了控制。</b> </p>
+            <pre class="p-0">
+                <code class="language-js p-0 line-numbers font-monospace">
+
+                $("#search-bar").click(function (event) {
+                    if (mScreenWidth.matches) {
+                        $("#home-timer").css("display", "none");
+                    }
+                    $(".home-searchbar").css("width", "500px");
+                    $(".daily-words").fadeIn(2000)
+                        .text(dailyWords[Math.round(Math.random() * dailyWords.length)]);
+                    $(".tip-words").fadeOut("slow");
+                    $(".bgbox").css({
+                        "transform": "scale(1.1)",
+                        "filter": "blur(20px)"
+                    });
+                    event.stopPropagation();
+                }).on("keypress", function (event) {
+                    if (event.keyCode === 13) {
+                        let url = "https://cn.bing.com/search?q=";
+                        url += $("#search-bar").val();
+                        window.open(url, "_blank");
+                        $("#search-bar").val("");
+                    }
+                });
+                </code>
+             </pre>
+            <br>
+            <p> 我们大量使用了jQuery 内置特效，例如 fadeOut 与 show/hide，我们使用了一个较为恰当的时间以控制特效效果 </p>
+            <p> <b>我们使用了简单的多线程js 代码</b>，调用了 setTimeout, setInterval控制一些效果的体现。
+                例如，提示框会在页面打开后3s后弹出，背景图15s更换一次等效果。 </p>
+            <pre class="p-0">
+                <code class="language-js line-numbers font-monospace">
+
+                function updateTimer() {
+                    $("#home-timer").text(timer());
+                }
+                setInterval(updateTimer, 10000);
+                </code>
+            </pre>
+            <p> 考虑到主页图像较多，我们也应用了 <b>图像预加载技术</b>： </p>
+            <pre class="p-0">
+                <code class="language-js line-numbers">
+
+                function preloadBackground() {
+                    /* preload background */
+                    let images = [];
+                    function preload() {
+                        for (let i = 0; i < preload.arguments.length; i++) {
+                            images[i] = new Image();
+                            images[i].src = preload.arguments[i];
+                            console.log(`image ${preload.arguments[i]} loaded`);
+                        }
+                    }
+
+                    preload(
+                        "../images/backgrounds/Light/background1.jpg",
+                        "../images/backgrounds/Light/background2.jpg",
+                        "../images/backgrounds/Light/background3.jpg",
+                        "../images/backgrounds/Light/background4.jpg",
+                        "../images/backgrounds/Dark/background1.jpg",
+                        "../images/backgrounds/Dark/background2.jpg",
+                        "../images/backgrounds/Dark/background3.jpg",
+                        "../images/backgrounds/Dark/background4.jpg",
+                        "../images/backgrounds/Login/LoginBackground.jpg"
+                        /* ... */
+                    );
+                }
+
+                </code>
+            </pre>
+            <p> 可以验证，加载速度的确有所加快。</p>
+            <p> 我们注意到在移动端下我们需要js 特殊处理，我们使用了 <b> js的媒体查询</b>解决了这个问题： </p>
+            <pre class="p-0">
+                <code class="language-js line-numbers">
+
+                /* According media screen to change some style */
+                const mScreenWidth = window.matchMedia('(max-width: 768px)');
+
+                </code>
+            </pre>
+            <p> 如本页面所示我们使用了 <b>prism.js 高亮渲染代码</b> ： </p>
+            <pre class="p-0">
+                <code class="language-js line-numbers">
+
+                console.log("Hello, World!!\n");
+                </code>
+            </pre>
+            <h5 class="fw-bold" id="tech-bs"> Bootstrap 与其自适应系统 </h5>
+            <p> 我们使用了 Bootstrap 作为我们的首选框架，
+                得益于Bootstrap 的灵活的 <b> 自适应系统 </b>，我们很好的实现了移动端的适配 </p>
+            <p> 我们通过 scss 与 Bootstrap 提供的API 完成了 <b>Bootstrap 的客制化</b> </p>
+            <pre class="p-0">
+                <code class="language-scss line-numbers">
+
+                $primary: #ff5568;
+                $font-family-monospace: "Fira-Code";
+                $btn-font-family: "sans-serif";
+                $navbar-light-color: #000000;
+                $nav-link-font-weight: 300;
+                $dropdown-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+                $dropdown-dark-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+                $nav-link-font-size: 1.1rem;
+                $navbar-dark-color: #ffffff;
+                </code>
+            </pre>
+            <p> 我们也没有过于依赖第三方库的效果，实际上，
+                <b>例如“关于”框我们就没有使用 Bootstrap 的 modal 组件，而是自行编写令我们满意的效果</b>  </p>
+            <pre class="p-0">
+                <code class="language-css line-numbers">
+
+                .himu-modal {
+                    z-index: 10000;
+                    -webkit-backdrop-filter: blur(10px) saturate(1.5);
+                    backdrop-filter: blur(10px) saturate(1.5);
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    display: none;
+                }
+
+                </code>
+            </pre>
+            <h5 class="fw-bold" id="tech-cookie"> Cookie 的应用 </h5>
+            <p>
+                我们借助了jQuery.Cookie 实现了“记住主题”的效果，在跳转页面 (Jump.html)
+                内我们巧妙使用了Cookie传递了页面的参数完成了一个页面不同跳转链接的效果。
+            </p>
+            <pre class="p-0">
+                <code class="language-js line-numbers">
+
+                function jumpToExternSite(siteName) {
+                    $.cookie("extern_site", siteName, {path: '/'});
+                    window.location.href = 'pages/jump.html';
+                }
+                </code>
+            </pre>
+            <h5 class="fw-bold" id="tech-cdn"> 域名与CDN加速 </h5>
+            <p>
+                本网站发布于github pages，但在<a href="https://myblog.himu.live">myblog.himu.live</a> 可用。
+                我们在myblog.himu.live上启用了Cloudflare CDN加速，在访问出现问题时，
+                我们建议访问 myblog.himu.live 而非 github pages
+            </p>
+        </div>
+        <div class="col-3 collapse py-3 px-1">
+            <div class="himu-card w-100">
+                <div class="himu-card-body">
+                    <h4 class="fw-bold"> 在此文章中： </h4>
+                    <h5 class="himu-heading"> 制作人员 </h5>
+                    <ul class="my-2">
+                        <li><b>Maintainer</b>: 刘焕</li>
+                        <li> 蓝自豪 </li>
+                    </ul>
+                    <h5 class="himu-heading"> Github </h5>
+                    <a class="himu-card-link-fluid" href="#"> 获取源代码 </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer id="foot">
+    <p> 本网站引用的图像或资源可能受到版权保护. </p>
+    <br>
+    <p> 浏览本网站说明已同意我们的<u>隐私声明和 Cookie</u> </p>
+    <p> 版权所有&copy; 2022 Himu &lt;mmpliuhuan@outlook.com&gt;, 仅用于学习交流, 非盈利用途  </p>
+</footer>
+
+<!--- Scripts --->
+<script src="../script/lib/jquery-3.6.3.min.js"></script>
+<script src="../script/lib/jquery.cookie.js"></script>
+<script src="../script/lib/bootstrap.bundle.min.js"></script>
+<script src="../script/components.js"></script>
+<script src="../script/lib/prism.js"></script>
+<script> setTheme(); </script>
+</body>
+</html>
