@@ -1,0 +1,115 @@
+
+#doc-sidebar {
+    position: sticky;
+    top: 0;
+    margin-top: 3px;
+
+    background-color: var(--bs-body-bg);
+    display: flex;
+    flex-direction: row;
+    max-height: calc(100vh);
+    height: 800px;
+    overflow: auto;
+
+    box-shadow: rgb(0 0 0 / 20%) 0 0 3px;
+    border-radius: .2rem;
+}
+
+#doc-sidebar ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+#doc-sidebar li {
+    width: 100%;
+}
+
+#doc-sidebar a {
+    width: 100%;
+    text-decoration: none;
+    color: var(--bs-body-color);
+
+    justify-content: left;
+    display: inline-flex;
+    border-radius: 0.25rem;
+    border-top: none;
+    padding: 1rem;
+
+    transition: all linear .1s;
+}
+
+#doc-sidebar a:hover {
+    background-color: rgba(0, 0, 0, 0.045);
+    color: var(--bs-link-hover-color);
+    cursor: pointer;
+}
+
+#doc-title {
+    width: 100%;
+    text-align: center;
+    border-bottom: 2px solid var(--bs-primary);
+}
+
+#doc-content img {
+    display: block;
+    margin: 5px auto;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.img-container {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    color: var(--bs-secondary);
+    font-size: 12px;
+    font-style: italic;
+}
+
+.img-container img {
+    border-radius: 5px;
+}
+
+#doc-content b {
+    color: var(--bs-primary);
+}
+
+#doc-content .tip {
+    margin: 10px 0;
+    width: 100%;
+    padding: 15px 20px;
+    border-radius: 2px;
+
+    color: var(--bs-body-color);
+    border-left: 5px solid var(--bs-primary);
+    box-shadow: rgb(0 0 0 / 20%) 0 0 3px;
+}
+
+#doc-content .tip::before {
+    content: url("../../images/Tips.png");
+    vertical-align: text-top;
+    display: inline-block;
+}
+
+#foot {
+    display: block;
+    width: 100%;
+    margin-top: 5%;
+    box-shadow: rgb(0 0 0 / 20%) 0 0 3px;
+    border: 1px solid rgba(58, 59, 61, 0.2);
+    font-size: 14px !important;
+    padding: 3% 3%;
+}
+
+#foot p {
+    padding: 0;
+    margin: 0;
+}
+
+@media screen and (max-width: 960px) {
+    #foot {
+        margin: 5% auto;
+    }
+}
